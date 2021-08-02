@@ -1,0 +1,9 @@
+.footerText{
+  background-color: rgb(111, 47, 47);
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  width: 100%;
+  margin-right: 50px;
+  margin-top: 100px;
+}
