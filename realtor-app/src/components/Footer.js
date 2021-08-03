@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/footer.css';
-
+//random note
 function Footer() {
   return (
     <div className="footer">
