@@ -40,6 +40,7 @@ John Batista
 ![John's Repository's Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=johnbatista1223&theme=blue-green)
 Ashleigh Freiler
 ![Ashleigh's Repository's Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=ARFreiler&theme=blue-green)
+
 Amy Smerlick
 ![Amy's Repository's Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=amysmerlick&theme=blue-green)
 Raquan Stanley
@@ -54,10 +55,16 @@ OR
 
 # **Credits**
 ***
-Thank you to Penn LPS Coding Bootcamp, instructors, peers
-
-
-![](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)  ![](	https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white) ![](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white) ![](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white) ![](https://img.shields.io/badge/GraphQl-E10098?style=for-the-badge&logo=graphql&logoColor=white) ![](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white) ![](https://img.shields.io/badge/Visual_Studio-5C2D91?style=for-the-badge&logo=visual%20studio&logoColor=white) ![](https://img.shields.io/badge/-ApolloGraphQL-311C87?style=for-the-badge&logo=apollo-graphql) ![](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) 	![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+>Thank you to Penn LPS Coding Bootcamp, instructors, peers
+>
+> ![](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)  ![](	https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) 
+> ![](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white) ![](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white) 
+>
+> ![](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white) ![](https://img.shields.io/badge/GraphQl-E10098?style=for-the-badge&logo=graphql&logoColor=white) 
+>
+> ![](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white) ![](https://img.shields.io/badge/Visual_Studio-5C2D91?style=for-the-badge&logo=visual%20studio&logoColor=white) ![](https://img.shields.io/badge/-ApolloGraphQL-311C87?style=for-the-badge&logo=apollo-graphql)
+> ![](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+>
 
 
 
@@ -68,23 +75,27 @@ The application you're enjoying is covered under the MIT license
 # **Questions For questions, please email a collaborator, or contact via GitHub. **
 
 ### **Amy Smerlick**
-
-[![GMAIL](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:amysmerlick@gmail.com) [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/amysmerlick) ![Profile View Counter](https://komarev.com/ghpvc/?username=amysmerlick)
+>
+>[![GMAIL](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:amysmerlick@gmail.com) [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/amysmerlick) ![Profile View Counter](https://komarev.com/ghpvc/?username=amysmerlick)
+>
 
 ***
 
 ### **Ashleigh Freiler**
-
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ARFreiler@gmail.com) [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ARFreiler) ![Profile View Counter](https://komarev.com/ghpvc/?username=arfreiler)
+>
+>[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ARFreiler@gmail.com) [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ARFreiler) ![Profile View Counter](https://komarev.com/ghpvc/?username=arfreiler)
+>
 
 ***
 
 ### **John Batista**
-
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:batista651@gmail.com) [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/johnbatista1223) ![Profile View Counter](https://komarev.com/ghpvc/?username=johnbatista1223)
+>
+>[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:batista651@gmail.com) [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/johnbatista1223) ![Profile View Counter](https://komarev.com/ghpvc/?username=johnbatista1223)
+>
 
 ***
 
 ### **Raquan Stanley**
-
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:raquan.stanley@gmail.com) [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Quando24) ![Profile View Counter](https://komarev.com/ghpvc/?username=Quando24)
+>
+>[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:raquan.stanley@gmail.com) [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Quando24) ![Profile View Counter](https://komarev.com/ghpvc/?username=Quando24)
+>
