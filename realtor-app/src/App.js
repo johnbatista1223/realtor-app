@@ -2,19 +2,39 @@ import React from 'react'
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
+import RegisterUser from './components/RegisterUser.js';
+import Login from './components/Login.js';
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
 function App() {
   return (
+    <Router>
     <div className="App">
       <Navbar/>
       <br/>
       <br/>
       <br/>
       <br/>
-      <Hero/>
+
+      <Switch>
+        
+        <Route exact path="/register">
+          <RegisterUser />
+        </Route>
+        <Route exact path="/login">
+          <Login />
+        </Route>
+        <Route exact path="/">
+          <Hero />
+        </Route>
+      </Switch>
+     
       <Footer/>
 
     </div>
+    </Router>
   );
 }
 
