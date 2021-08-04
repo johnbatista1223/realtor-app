@@ -69,22 +69,22 @@ The application you're enjoying is covered under the MIT license
 
 ### **Amy Smerlick**
 
-![](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white) [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/amysmerlick) ![Profile View Counter](https://komarev.com/ghpvc/?username=amysmerlick)
+[![GMAIL](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:amysmerlick@gmail.com) [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/amysmerlick) ![Profile View Counter](https://komarev.com/ghpvc/?username=amysmerlick)
 
 ***
 
 ### **Ashleigh Freiler**
 
-![](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white) [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ARFreiler) ![Profile View Counter](https://komarev.com/ghpvc/?username=arfreiler)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ARFreiler@gmail.com) [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ARFreiler) ![Profile View Counter](https://komarev.com/ghpvc/?username=arfreiler)
 
 ***
 
 ### **John Batista**
 
-![](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white) [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/johnbatista1223) ![Profile View Counter](https://komarev.com/ghpvc/?username=johnbatista1223)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:batista651@gmail.com) [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/johnbatista1223) ![Profile View Counter](https://komarev.com/ghpvc/?username=johnbatista1223)
 
 ***
 
 ### **Raquan Stanley**
 
-![](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white) [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Quando24) ![Profile View Counter](https://komarev.com/ghpvc/?username=Quando24)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:raquan.stanley@gmail.com) [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Quando24) ![Profile View Counter](https://komarev.com/ghpvc/?username=Quando24)
