@@ -45,39 +45,46 @@ Amy Smerlick
 Raquan Stanley
 ![Raquan's Repository's Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=Quando24&theme=blue-green)
 
-# Instructions
+# **Instructions**
 >Head to our website: 
 
 OR
 
 >Clone our repo, run 'npm install' in the command line, run the Schema in MySQL workbench, then run 'node server.js' in the command line. Open your browser to the appropriate local host. 
 
-# Credits
-Thank you to Penn LPS Coding Bootcamp, instructors, peers, [JavaScript](https://www.javascript.com/), jQuery, [NPM](https://www.npmjs.com/) and its packages, [Express.js](https://expressjs.com/), [MongoDB](https://www.mongodb.com/), [GraphQL](https://graphql.org/), [Styled components](https://styled-components.com/), and Heroku.
+# **Credits**
+***
+Thank you to Penn LPS Coding Bootcamp, instructors, peers
 
-# License
+
+![](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)  ![](	https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white) ![](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white) ![](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white) ![](https://img.shields.io/badge/GraphQl-E10098?style=for-the-badge&logo=graphql&logoColor=white) ![](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white) ![](https://img.shields.io/badge/Visual_Studio-5C2D91?style=for-the-badge&logo=visual%20studio&logoColor=white) ![](https://img.shields.io/badge/-ApolloGraphQL-311C87?style=for-the-badge&logo=apollo-graphql) ![](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) 	![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+
+
+
+# **License**
 The application you're enjoying is covered under the MIT license
 ## [![License](https://img.shields.io/badge/License-MIT%202.0-blue.svg)](https://opensource.org/licenses/MIT)
 
-# Questions
-For questions, please email a collaborator, or contact via GitHub.
+# **Questions For questions, please email a collaborator, or contact via GitHub. **
 
-Amy Smerlick
-* 📧Email: amysmerlick@gmail.com
-* 💹GitHub: www.github.com/amysmerlick
-* ![Profile View Counter](https://komarev.com/ghpvc/?username=amysmerlick)
+### **Amy Smerlick**
 
-Ashleigh Freiler
-* 📧Email: ashleighfreiler@gmail.com
-* 💹GitHub: www.github.com/arfreiler
-* ![Profile View Counter](https://komarev.com/ghpvc/?username=arfreiler)
+![](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white) [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/amysmerlick) ![Profile View Counter](https://komarev.com/ghpvc/?username=amysmerlick)
 
-John Batista
-* 📧Email: batistaj651@gmail.com
-* 💹GitHub: www.github.com/johnbatista1223
-* ![Profile View Counter](https://komarev.com/ghpvc/?username=johnbatista1223)
+***
 
-Raquan Stanley
-* 📧Email: raquan.stanley@gmail.com
-* 💹GitHub: www.github.com/Quando24
-* ![Profile View Counter](https://komarev.com/ghpvc/?username=Quando24)
+### **Ashleigh Freiler**
+
+![](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white) [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ARFreiler) ![Profile View Counter](https://komarev.com/ghpvc/?username=arfreiler)
+
+***
+
+### **John Batista**
+
+![](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white) [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/johnbatista1223) ![Profile View Counter](https://komarev.com/ghpvc/?username=johnbatista1223)
+
+***
+
+### **Raquan Stanley**
+
+![](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white) [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Quando24) ![Profile View Counter](https://komarev.com/ghpvc/?username=Quando24)
