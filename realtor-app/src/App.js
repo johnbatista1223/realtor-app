@@ -6,6 +6,14 @@ import RegisterUser from './components/RegisterUser.js';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import Contact from './components/Contact';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import InputForm from './components/inputForm';
+import Home from './components/Home';
+
+
+
+
+
+
 // import InputForm from './components/inputForm';
 
 
@@ -21,6 +29,9 @@ function App() {
       <br/>
 
       <Switch>
+      <Route exact path="/homes">
+          <Home/>
+        </Route>
         <Route exact path="/register">
           <RegisterUser />
         </Route>
