@@ -17,6 +17,7 @@ padding: 1rem 2rem;
 z-index:100;
 background-color:rgb(62, 126, 161);
 width:100%;
+font-size: 25px;
 .heart {
   fill: red;
   position: relative;
@@ -39,7 +40,6 @@ width:100%;
 `
 
 const NavLink = css`
- const NavLink = css`
  color:#FFFFFF;
  display:flex;
  align-items:center;
@@ -60,16 +60,16 @@ display:flex;
 justify-content: space-between;
 margin-right:0;
 `
-const NavMenuLinks = styled(Link)`
-`
+// const NavMenuLinks = styled(Link)`
+// `
 const h1 = styled.h1`
 font-size-30px;
-`
+color:white`;
 
-const NavMenuLinks = styled(Link) `
+const NavMenuLinks = styled(Link)`
 ${NavLink} 
 font-size:30px;
-margin-right:15px;`
+margin-right:15px`;
 
 const Navbar = () => {
   return (

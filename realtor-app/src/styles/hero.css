@@ -32,8 +32,6 @@
   color: white;
 }
 
-.tablinks:active {}
-
 .signin {
   display: flex;
   flex-direction: column;
