@@ -4,7 +4,7 @@ import '../styles/footer.css';
 function Footer() {
   return (
     <div className="footer">
-      <p className="footerText">©2021 Group AJA</p>
+      <p className="footerText">©2021 Group AJAR</p>
     </div>
     );
 }

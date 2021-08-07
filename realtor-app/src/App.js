@@ -8,19 +8,21 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import Contact from './components/Contact';
 
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import InputForm from './components/inputForm';
+
 
 function App() {
   return (
     <Router>
     <div className="App">
       <Navbar/>
+      <InputForm/>
       <br/>
       <br/>
       <br/>
       <br/>
 
       <Switch>
-        
         <Route exact path="/register">
           <RegisterUser />
         </Route>
