@@ -8,11 +8,14 @@
 .login {
   display: flex;
   flex-direction: column;
-  /* background-color: rgb(23, 45, 79); */
   background: linear-gradient(to bottom, rgba(23, 45, 79, 1) 30%, rgba(0, 0, 0, 0) 100%);
   padding: 30px;
   border-radius: 5px;
 }
+
+.title {
+  text-align: center;
+
 .tab {
   margin-bottom: 30px;
 }
@@ -51,14 +54,47 @@
   border-radius: 30px;
   border: none;
   height: 25px;
+  width: 80px;
   margin-top: 30px;
-  margin-bottom: 90px;
+  /* margin-bottom: 90px; */
+  background-color: rgb(9, 86, 249);
+  color: white;
+}
+
+#login-button {
+  text-align: center;
+}
+
+#register {
+  text-align: center;
+}
+
+#register-submit {
+  border-radius: 30px;
+  border: none;
+  height: 25px;
+  width: 90px;
+  margin-top: 10px;
+  /* margin-bottom: 90px; */
   background-color: rgb(9, 86, 249);
   color: white;
 }
 a {
   text-align: center;
 }
+
+h2 {
+  color: white;
+}
+
+h3 {
+  color: white;
+}
+
+::placeholder {
+  color: lightgray;
+}
+
 @media screen and (min-width: 992px) {
   .miniHero {
     background-position-y: -150px;
