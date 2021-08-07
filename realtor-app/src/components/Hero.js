@@ -6,30 +6,49 @@ import '../styles/hero.css';
 
 function Hero() {
   return (
-<div class='hero container'>
-       <div class="login">
-        <div class="tab">
-          <button class="tablinks" onclick="">Login</button>
-          <button class="tablinks" onclick="">Register</button>
-        </div>
-        <div class="signin">
-          <div class="inputs">
-            <p>Username</p>
-            <input id="username" type="text" />
-            <p>Password</p>
-            <input id="password" type="text" />
-          </div>
-          <button id="submit" type="submit">Submit</button>
-          <a href="" id="recover">Forgot your password?</a>
-        </div>
 
-        <div className="hero hero-lg mb-3">
-          <div className="hero-body text-center text-light">
+    <div class="hero-container">
+
+      <div class="login">
+        <div class="title">
+          <h2>Login to HomePage</h2>
+        </div>
+      </div>
+      <div class='hero container'>
+        <div class="login">
+          <div class="tab">
+            <button class="tablinks" onclick="">Login</button>
+            <button class="tablinks" onclick="">Register</button>
+
+          </div>
+          <div class="signin">
+            <div class="inputs">
+              <p>Username</p>
+              <input
+                id="username"
+                type="text"
+                placeholder=" Type your username here..."
+              />
+              <p>Password</p>
+              <input
+                id="password"
+                type="text"
+                placeholder=" Type your password here..."
+              />
+            </div>
+            <a href="" id="recover">Forgot your password?</a>
+            <div id="login-button">
+              <button id="submit" type="submit">Submit</button>
+            </div>
+            <div id="register">
+              <h3>Or create an account</h3>
+              <button id="register-submit" type="submit">Register</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  )
+      )
 }
 
-export default Hero
+      export default Hero
