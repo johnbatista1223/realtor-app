@@ -1,11 +1,12 @@
 import React from 'react';
 import '../styles/hero.css';
-import SearchForm from '../components/form';
+
 
 
 
 function Hero() {
   return (
+
     <div class="container">
       <div class="login">
         <div class="tab">
@@ -22,6 +23,11 @@ function Hero() {
           <button id="submit" type="submit">Submit</button>
           <a href="" id="recover">Forgot your password?</a>
         </div>
+
+    <div className="hero hero-lg mb-3">
+      <div className="hero-body text-center text-light">
+        <h1>There's No Place Like Home</h1>
+
       </div>
     </div>
   )

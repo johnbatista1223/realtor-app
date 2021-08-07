@@ -2,6 +2,7 @@ import React from 'react'
 import{menuData} from '../Data/MenuData';
 import { Link } from 'react-router-dom';
 import styled, {css} from 'styled-components/macro';
+import { FaHome } from 'react-icons/fa';
 
 
 
@@ -24,7 +25,8 @@ width:100%;
  cursor:pointer;
  text-decoration:none;
  `
-const Logo = styled(Link)`
+const Logo = styled(FaHome)`
+
 ${NavLink}
 `
 const MenuBars = styled.i``;
