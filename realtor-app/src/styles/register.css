@@ -1,0 +1,35 @@
+.container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs input {
+    border-radius: 5px;
+    border: none;
+    height: 25px;
+    background-color: rgb(62, 126, 161);
+}
+
+p {
+    font-size: 15px;
+    margin-bottom: 0%;
+    color: white;
+}
+
+#register-submit {
+    border-radius: 30px;
+    border: none;
+    height: 25px;
+    margin-top: 30px;
+    margin-bottom: 90px;
+    background-color: rgb(9, 86, 249);
+    color: white;
+}
