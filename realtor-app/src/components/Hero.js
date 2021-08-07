@@ -6,7 +6,6 @@ import '../styles/hero.css';
 
 function Hero() {
   return (
-
     <div class="container">
       <div class="login">
         <div class="tab">
@@ -30,8 +29,6 @@ function Hero() {
           </div>
         </div>
       </div>
-    </div>
-    </div>
     </div>
   )
 }

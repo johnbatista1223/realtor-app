@@ -25,7 +25,7 @@ width:100%;
  cursor:pointer;
  text-decoration:none;
  `
-const Logo = styled(FaHome)`
+const Logo = styled(Link)`
 
 ${NavLink}
 `
@@ -45,7 +45,8 @@ const Navbar = () => {
   return (
     
       <Nav>
-      <Logo to="/">Home icon</Logo>
+      <Logo to="/"><FaHome size={30}/> </Logo>
+      
       <MenuBars/>
       <NavMenu>
         {menuData.map((item) => (
