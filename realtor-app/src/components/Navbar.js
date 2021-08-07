@@ -1,7 +1,7 @@
 import React from 'react'
-import{menuData} from '../Data/MenuData';
+import { menuData } from '../Data/MenuData';
 import { Link } from 'react-router-dom';
-import styled, {css} from 'styled-components/macro';
+import styled, { css } from 'styled-components/macro';
 import { FaHome } from 'react-icons/fa';
 
 
@@ -37,6 +37,8 @@ width:100%;
   }
 }
 `
+
+const NavLink = css`
  const NavLink = css`
  color:#FFFFFF;
  display:flex;
@@ -53,10 +55,12 @@ ${NavLink}
 `
 const MenuBars = styled.i``;
 
-const NavMenu = styled.div `
+const NavMenu = styled.div`
 display:flex;
 justify-content: space-between;
 margin-right:0;
+`
+const NavMenuLinks = styled(Link)`
 `
 const h1 = styled.h1`
 font-size-30px;
@@ -69,6 +73,7 @@ margin-right:15px;`
 
 const Navbar = () => {
   return (
+
     
       <Nav>
       <Logo to="/"><FaHome size={75}/> </Logo>
@@ -80,15 +85,15 @@ const Navbar = () => {
       <MenuBars/>
       <NavMenu>
         {menuData.map((item) => (
-      <NavMenuLinks to={item.link} key={item.id}>
-     {item.title}
-      </NavMenuLinks>
+          <NavMenuLinks to={item.link} key={item.id}>
+            {item.title}
+          </NavMenuLinks>
         ))}
       </NavMenu>
-     
-      </Nav>
-      
-   
+
+    </Nav>
+
+
   )
 }
 
