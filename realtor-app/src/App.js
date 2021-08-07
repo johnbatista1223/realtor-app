@@ -8,6 +8,7 @@ import Contact from './components/Contact';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import InputForm from './components/inputForm';
 import Home from './components/Home';
+import Rental from './components/Rental';
 
 
 
@@ -31,6 +32,9 @@ function App() {
       <Switch>
       <Route exact path="/homes">
           <Home/>
+        </Route> 
+        <Route exact path="/rentals">
+          <Rental/>
         </Route>
         <Route exact path="/register">
           <RegisterUser />
