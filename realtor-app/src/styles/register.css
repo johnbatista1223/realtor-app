@@ -50,3 +50,13 @@ p {
     background-color: rgb(9, 86, 249);
     color: white;
 }
+
+::placeholder {
+    color: lightgray;
+}
+
+@media screen and (min-width: 992px) {
+    .miniHero {
+        background-position-y: -150px;
+    }
+}
