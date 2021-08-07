@@ -1,30 +1,10 @@
-/* .hero-body{
-  
-  text-align: center;
-  color: rgb(255, 255, 255);
-}
-.hero {
-  margin: -54px;
-  padding-top: 100px;
-  height: 850px;
-  background-image: url('../images/house2.jpeg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  
-  
-}
-h1{
-  font-size: 40px;
-} */
-
-.container {
+.hero-container {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 30%;
 }
-
 .login {
   display: flex;
   flex-direction: column;
@@ -33,11 +13,9 @@ h1{
   padding: 30px;
   border-radius: 5px;
 }
-
 .tab {
   margin-bottom: 30px;
 }
-
 .tablinks {
   background-color: Transparent;
   background-repeat: no-repeat;
@@ -49,32 +27,25 @@ h1{
   margin-left: -5px;
   color: white;
 }
-
-.tablinks:active {}
-
 .signin {
   display: flex;
   flex-direction: column;
 }
-
 .inputs {
   display: flex;
   flex-direction: column;
 }
-
 .inputs p {
   font-size: 15px;
   margin-bottom: 0%;
   color: white;
 }
-
 .inputs input {
   border-radius: 5px;
   border: none;
   height: 25px;
   background-color: rgb(62, 126, 161);
 }
-
 #submit {
   border-radius: 30px;
   border: none;
@@ -84,11 +55,9 @@ h1{
   background-color: rgb(9, 86, 249);
   color: white;
 }
-
 a {
   text-align: center;
 }
-
 @media screen and (min-width: 992px) {
   .miniHero {
     background-position-y: -150px;
