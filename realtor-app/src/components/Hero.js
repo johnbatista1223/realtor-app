@@ -7,7 +7,7 @@ import '../styles/hero.css';
 function Hero() {
   return (
 
-    <div class="container">
+    <div class="hero-container">
       <div class="login">
         <div class="tab">
           <button class="tablinks" onclick="">Login</button>
