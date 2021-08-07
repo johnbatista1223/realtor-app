@@ -10,7 +10,7 @@ const Nav = styled.nav`
 font-family: 'Josefin Sans', sans-serif;
 color:#FFFFFF;
 margin-left:-10px;
-height:70px;
+height:100px;
 display:flex;
 justify-content: space-between;
 padding: 1rem 2rem;
@@ -72,9 +72,7 @@ font-size:30px;
 margin-right:15px`;
 
 const Navbar = () => {
-  return (
-
-    
+  return (    
       <Nav>
       <Logo to="/"><FaHome size={75}/> </Logo>
       <h1>There's No Place Like H<svg class="heart" viewBox="0 0 32 29.6">
