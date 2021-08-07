@@ -6,9 +6,9 @@ import '../styles/hero.css';
 
 function Hero() {
   return (
-
     <div class="hero-container">
-      <div class="login">
+
+       <div class="login">
         <div class="tab">
           <button class="tablinks" onclick="">Login</button>
           <button class="tablinks" onclick="">Register</button>
@@ -26,7 +26,6 @@ function Hero() {
 
         <div className="hero hero-lg mb-3">
           <div className="hero-body text-center text-light">
-            <h1>There's No Place Like Home</h1>
           </div>
         </div>
       </div>
