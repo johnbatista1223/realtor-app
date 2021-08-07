@@ -3,10 +3,17 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
 import RegisterUser from './components/RegisterUser.js';
-import Login from './components/Login.js';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import Contact from './components/Contact';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import InputForm from './components/inputForm';
+import Home from './components/Home';
+
+
+
+
+
+
 // import InputForm from './components/inputForm';
 
 
@@ -22,11 +29,11 @@ function App() {
       <br/>
 
       <Switch>
+      <Route exact path="/homes">
+          <Home/>
+        </Route>
         <Route exact path="/register">
           <RegisterUser />
-        </Route>
-        <Route exact path="/login">
-          <Login />
         </Route>
         <Route exact path="/contact">
           <Contact/>

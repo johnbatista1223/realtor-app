@@ -1,8 +1,6 @@
 import React from 'react';
 import '../styles/register.css';
-
 const RegisterUser = () => {
-
     return (
         <div className="registration">
             <div class="register">
@@ -26,9 +24,6 @@ const RegisterUser = () => {
                 </div>
             </div>
         </div>
-
     )
-
 }
-
 export default RegisterUser

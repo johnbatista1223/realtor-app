@@ -6,11 +6,19 @@ import '../styles/hero.css';
 
 function Hero() {
   return (
+
     <div class="hero-container">
 
       <div class="login">
         <div class="title">
           <h2>Login to HomePage</h2>
+
+<div class='hero container'>
+       <div class="login">
+        <div class="tab">
+          <button class="tablinks" onclick="">Login</button>
+          <button class="tablinks" onclick="">Register</button>
+    
         </div>
         <div class="signin">
           <div class="inputs">
