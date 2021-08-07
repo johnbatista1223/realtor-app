@@ -34,6 +34,12 @@ function App() {
           <Hero />
         </Route>
       </Switch>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
       <Footer/>
 
     </div>
