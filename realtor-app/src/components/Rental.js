@@ -183,7 +183,7 @@ class Rental extends React.Component {
       <div className="App">
         <section>
           <Filter change={this.change} globalState={this.state} populateAction={this.populateForms} />
-          <Listings listingsRentalData={this.state.filteredData} change={this.change} globalState={this.state} changeView={this.changeView} />
+          <ListingsRental listingsRentalData={this.state.filteredData} change={this.change} globalState={this.state} changeView={this.changeView} />
         </section>
       </div>
     );
