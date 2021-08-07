@@ -1,4 +1,5 @@
-import styled, {css} from 'styled-components/macro';
+import styled, { css } from 'styled-components/macro';
+import  '../styles/hero.css';
 
 
 const RegistrationFormContainer = styled.div`
@@ -43,20 +44,41 @@ align-self: center;
 const RegisterUser = () => {
 
     return (
-        <RegistrationFormContainer>
-            <RegistrationFormWrapper>
-                <RegistrationFormLabel for="name">First Name:</RegistrationFormLabel>
-                <RegistrationFormField type="text" id="name" name="ame" value="John Doe" />
-                <RegistrationFormLabel for="email">Email:</RegistrationFormLabel>
-                <RegistrationFormField type="text" id="email" name="email" value="jdoe4@gmail.com" />
-                <RegistrationFormLabel for="pass1">Password:</RegistrationFormLabel>
-                <RegistrationFormField type="password" id="pass1" name="email" value="test1234" />
-                <RegistrationFormLabel for="pass2">Confirm Password:</RegistrationFormLabel>
-                <RegistrationFormField type="password" id="pass2" name="email" value="test1234" />
+        // <RegistrationFormContainer>
+        //     <RegistrationFormWrapper>
+        //         <RegistrationFormLabel for="name">First Name:</RegistrationFormLabel>
+        //         <RegistrationFormField type="text" id="name" name="ame" value="John Doe" />
+        //         <RegistrationFormLabel for="email">Email:</RegistrationFormLabel>
+        //         <RegistrationFormField type="text" id="email" name="email" value="jdoe4@gmail.com" />
+        //         <RegistrationFormLabel for="pass1">Password:</RegistrationFormLabel>
+        //         <RegistrationFormField type="password" id="pass1" name="email" value="test1234" />
+        //         <RegistrationFormLabel for="pass2">Confirm Password:</RegistrationFormLabel>
+        //         <RegistrationFormField type="password" id="pass2" name="email" value="test1234" />
 
-                <SubmitButton>Sign Up</SubmitButton>
-            </RegistrationFormWrapper>
-        </RegistrationFormContainer>
+        //         <SubmitButton>Sign Up</SubmitButton>
+        //     </RegistrationFormWrapper>
+        // </RegistrationFormContainer> <div class="container">
+        <div class="register">
+            <div class="title">
+                <h1>Register with HomePage</h1>
+            </div>
+            <div class="info">
+                <div class="inputs">
+                    <p>Username</p>
+                    <input id="username" type="text" />
+                    <p>Email</p>
+                    <input id="email" type="text" />
+                    <p>Password</p>
+                    <input id="password" type="text" />
+                    <p>Confirm Password</p>
+                    <input id="confirm-password" type="text" />
+                </div>
+                <div class="reg-button">
+                    <button id="register-submit" type="submit">Submit</button>
+                </div>
+            </div>
+        </div>
+
     )
 
 }
