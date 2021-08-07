@@ -3,8 +3,8 @@ import '../styles/footer.css';
 //random note
 function Footer() {
   return (
-    <div class="container">
-      <div class="row">
+    <div class="footer-wrapper">
+      {/* <div class="row"> */}
         <div class="col-lg-4 col-md-6 col-sm-7">
           <div class="footer__about">
             <div class="footer__logo">
@@ -40,8 +40,8 @@ function Footer() {
               </div>
             </div>
           </div>
-        </div>
-        <div class="row">
+        {/* </div> */}
+        {/* <div class="row"> */}
           <div class="col-lg-12">
             <div class="footer__copyright__text">
               <small>Copyright © Home Page
@@ -49,7 +49,7 @@ function Footer() {
               </small>
             </div>
           </div>
-        </div>
+        {/* </div> */}
       </div>
       );
 }

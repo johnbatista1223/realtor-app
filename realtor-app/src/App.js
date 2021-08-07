@@ -6,9 +6,8 @@ import RegisterUser from './components/RegisterUser.js';
 import Login from './components/Login.js';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import Contact from './components/Contact';
-
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-import InputForm from './components/inputForm';
+// import InputForm from './components/inputForm';
 
 
 function App() {
@@ -16,7 +15,7 @@ function App() {
     <Router>
     <div className="App">
       <Navbar/>
-      <InputForm/>
+      {/* <InputForm/> */}
       <br/>
       <br/>
       <br/>
