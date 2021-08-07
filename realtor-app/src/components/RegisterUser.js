@@ -4,7 +4,7 @@ import '../styles/register.css';
 const RegisterUser = () => {
 
     return (
-        <div className="container">
+        <div className="registration">
             <div class="register">
                 <div class="title">
                     <h1>Register with HomePage</h1>
