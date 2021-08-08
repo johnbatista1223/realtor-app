@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { menuData } from '../Data/MenuData';
 import { Link } from 'react-router-dom';
 import styled, { css } from 'styled-components/macro';
 import { FaHome } from 'react-icons/fa';
+import { UserContext } from '../context/UserProvider';
 
 
 
@@ -15,7 +16,7 @@ display:flex;
 justify-content: space-between;
 padding: 1rem 2rem;
 z-index:100;
-background-color:rgb(62, 126, 161);
+background-color:rgba(23, 45, 79, 1);
 width:100%;
 font-size: 25px;
 .heart {
@@ -72,6 +73,8 @@ font-size:30px;
 margin-right:15px`;
 
 const Navbar = () => {
+
+  const {  loggedIn } = useContext(UserContext)
   return (
     <Nav>
       <Logo to="/"><FaHome size={75} /> </Logo>
@@ -81,13 +84,13 @@ const Navbar = () => {
       </svg>me</h1>
 
       <MenuBars />
-      <NavMenu>
+      {loggedIn && <NavMenu>
         {menuData.map((item) => (
           <NavMenuLinks to={item.link} key={item.id}>
             {item.title}
           </NavMenuLinks>
         ))}
-      </NavMenu>
+      </NavMenu>}
 
     </Nav>
 

@@ -18,17 +18,22 @@ function Hero() {
             <p>Password</p>
             <input
               id="password"
-              type="text"
+              type="password"
               placeholder=" Type your password here..."
             />
           </div>
           <a href="" id="recover">Forgot your password?</a>
           <div id="login-button">
-            <button id="submit" type="submit">Submit</button>
+            <a href="/Profile">
+            <button id="submit" type="submit">Submit</button></a>
           </div>
           <div id="register">
             <h3>Or create an account</h3>
-            <button id="create-account" type="submit">Register</button>
+
+
+
+            <a href="/Register">
+            <button id="create-account" type="submit">Register</button></a>
 
           </div>
         </div>
