@@ -33,7 +33,8 @@ function Hero() {
           </div>
           <div id="register">
             <h3>Or create an account</h3>
-            <button id="register-submit" type="submit">Register</button>
+            <button id="create-account" type="submit">Register</button>
+
           </div>
         </div>
       </div>
