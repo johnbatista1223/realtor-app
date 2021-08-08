@@ -1,0 +1,102 @@
+.for-sale {
+
+
+    flex: 1 1 auto;
+    width: 100%;
+
+    display: flex;
+    flex: row;
+    
+
+}
+
+.for-sale .filter-wrapper {
+
+    flex: 0 0 25%;
+    padding-right: 10px;
+    border-right: solid 1px black;
+
+}
+
+.for-sale .listings-wrapper {
+
+    flex: 1 1 auto;
+
+    display: flex;
+    flex-flow: column;
+    padding: 20px;
+
+
+}
+
+.for-sale .listings-wrapper .search-area {
+
+    flex: 0 0 auto;
+
+}
+
+.for-sale .listings-wrapper .search-area input {
+
+    width: 70%;
+    background: transparent;
+    font-size: 2rem;
+    border: none;
+    border-bottom: 1px solid #828d9d;
+    margin-bottom: 20px;
+    font-weight: 300;
+    color: #c8c8c8;
+
+}
+
+.for-sale .listings-wrapper .listing-results-wrapper {
+
+    flex: 1 1 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+
+
+    justify-items: left;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.for-sale .listings-wrapper .listing-results-wrapper .listing-card {
+
+    
+    width: 300px;
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 9px 54px -4px rgb(224 224 224);
+  
+}
+
+.for-sale .listings-wrapper .listing-results-wrapper .listing-card .image {
+
+    flex: 0 0 200px;
+    overflow: hidden;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+
+    background-color: grey;
+
+}
+
+.for-sale .listings-wrapper .listing-results-wrapper .listing-card .image img {
+
+    object-fit: contain;
+    width: 100%;
+}
+
+.for-sale .listings-wrapper .listing-results-wrapper .listing-card .details {
+
+    flex: 1 1 auto;
+    background-color: white;
+    padding: 10px;
+
+}
