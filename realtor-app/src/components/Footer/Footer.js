@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/footer.css';
+import './footer.css';
 
 //random note
 function Footer() {
@@ -10,31 +10,31 @@ function Footer() {
                 <div class="col">
                     <h1>Company</h1>
                     <ul>
-                    <li><a href="/Contact">About</a></li>
-                    <li><a href="/Contact">Mission</a></li>
-                    <li><a href="/Contact">Services</a></li>
-                    <li><a href="/Contact">Social</a></li>
-                    <li><a href="/Contact">Get in Touch</a></li>
+                        <li><a href="/Contact">About</a></li>
+                        <li><a href="/Contact">Mission</a></li>
+                        <li><a href="/Contact">Services</a></li>
+                        <li><a href="/Contact">Social</a></li>
+                        <li><a href="/Contact">Get in Touch</a></li>
                     </ul>
                 </div>
                 <div class="col">
                     <h1>Products</h1>
-                    <ul>                        
-                    <li><a href="/Homes">About</a></li>
-                    <li><a href="/Homes">Mission</a></li>
-                    <li><a href="/Homes">Services</a></li>
-                    <li><a href="/Homes">Social</a></li>
-                    <li><a href="/Homes">Get in Touch</a></li>
+                    <ul>
+                        <li><a href="/Homes">About</a></li>
+                        <li><a href="/Homes">Mission</a></li>
+                        <li><a href="/Homes">Services</a></li>
+                        <li><a href="/Homes">Social</a></li>
+                        <li><a href="/Homes">Get in Touch</a></li>
                     </ul>
                 </div>
                 <div class="col">
                     <h1>Accounts</h1>
                     <ul>
-                    <li><a href="/Rentals">About</a></li>
-                    <li><a href="/Rentals">Mission</a></li>
-                    <li><a href="/Rentals">Services</a></li>
-                    <li><a href="/Rentals">Social</a></li>
-                    <li><a href="/Rentals">Get in Touch</a></li>
+                        <li><a href="/Rentals">About</a></li>
+                        <li><a href="/Rentals">Mission</a></li>
+                        <li><a href="/Rentals">Services</a></li>
+                        <li><a href="/Rentals">Social</a></li>
+                        <li><a href="/Rentals">Get in Touch</a></li>
                     </ul>
                 </div>
                 <div class="col social">

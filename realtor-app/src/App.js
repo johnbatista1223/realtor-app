@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import Navbar from './components/Navbar';
 import Hero from './components/Hero/Hero';
-import Footer from './components/Footer';
+import Footer from './components/Footer/Footer';
 import RegisterUser from './components/Register/RegisterUser.js';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import Contact from './components/Contact/Contact';
