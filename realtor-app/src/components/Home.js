@@ -18,7 +18,7 @@ const Home = () => {
   
   useEffect(() => {
     //Get listings
-    console.log(priceLow, priceHigh)
+    console.log(priceLow, priceHigh, city, stateCode)
     
     var options = {
       method: 'GET',
@@ -35,7 +35,7 @@ const Home = () => {
     }).catch(function (error) {
       console.error(error);
     });
-  }, [priceLow, priceHigh])
+  }, [priceLow, priceHigh, city, stateCode])
   
   // constructor() {
   //   super()
@@ -184,10 +184,12 @@ const Home = () => {
     return (
       <div className="for-sale">
         <div className="filter-wrapper">
-        <Filter updateFilters={(priceLow, priceHigh) => {
+        <Filter updateFilters={(priceLow, priceHigh, city, state) => {
           console.log("update")
           setPriceLow(parseInt(priceLow))
           setPriceHigh(parseInt(priceHigh))
+          setCity(city)
+          setStateCode(state)
         }} />
         </div>
         <div className="listings-wrapper">
