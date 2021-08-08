@@ -10,13 +10,13 @@ const RegisterUser = () => {
                 <div class="info">
                     <div class="inputs">
                         <p>Username</p>
-                        <input id="username" type="text" />
+                        <input id="username" type="text" placeholder=" Type your username here..." />
                         <p>Email</p>
-                        <input id="email" type="text" />
+                        <input id="email" type="text" placeholder=" Type your email here..." />
                         <p>Password</p>
-                        <input id="password" type="text" />
+                        <input id="password" type="text" placeholder=" Type your password here..." />
                         <p>Confirm Password</p>
-                        <input id="confirm-password" type="text" />
+                        <input id="confirm-password" type="text" placeholder=" Confirm your password here..." />
                     </div>
                     <div class="reg-button">
                         <button id="register-submit" type="submit">Submit</button>
