@@ -27,7 +27,7 @@ export class Listings extends Component {
 
                   <div className="col-md-9">
                     <div className="user-details">
-                      <span className="user-name">Nina Jones</span>
+                      <span className="user-name">john batista</span>
                       <span className="post-date">05/05/2018</span>
                     </div>
                     <div className="listing-details">

@@ -1,7 +1,9 @@
 import React from 'react';
 import Filter from '../components/Filter'
 import Listings from '../components/Listings'
-import '../styles/main.css';
+import '../styles/grid.css';
+import '../styles/listings.css';
+import '../styles/content-area.css';
 
 import listingsData from '../Data/ListingsData'
 
