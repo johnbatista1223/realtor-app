@@ -10,13 +10,14 @@ const Nav = styled.nav`
 font-family: 'Josefin Sans', sans-serif;
 color:#FFFFFF;
 margin-left:-10px;
-height:70px;
+height:100px;
 display:flex;
 justify-content: space-between;
 padding: 1rem 2rem;
 z-index:100;
 background-color:rgb(62, 126, 161);
 width:100%;
+font-size: 25px;
 .heart {
   fill: red;
   position: relative;
@@ -38,7 +39,6 @@ width:100%;
 }
 `
 
-// const NavLink = css`
 const NavLink = css`
  color:#FFFFFF;
  display:flex;
@@ -61,15 +61,18 @@ justify-content: space-between;
 margin-right:0;
 `
 
+
+const h1 = styled.h1`
+font-size-30px;
+color:white`;
+
 const NavMenuLinks = styled(Link)`
 ${NavLink} 
 font-size:30px;
-margin-right:15px;`
+margin-right:15px`;
 
 const Navbar = () => {
   return (
-
-
     <Nav>
       <Logo to="/"><FaHome size={75} /> </Logo>
       <h1>There's No Place Like H<svg class="heart" viewBox="0 0 32 29.6">

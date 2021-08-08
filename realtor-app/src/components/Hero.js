@@ -1,13 +1,8 @@
 import React from 'react';
 import '../styles/hero.css';
-
-
-
-
 function Hero() {
   return (
     <div class="hero-container">
-
       <div class="login">
         <div class="title">
           <h2>Login to HomePage</h2>
