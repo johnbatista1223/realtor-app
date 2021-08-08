@@ -3,7 +3,7 @@
 @import "content-area.css";
 
 *, html, body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   box-sizing: border-box;
 }
 *:focus {
