@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-// import Footer from './components/Footer';
+import Footer from './components/Footer';
 import RegisterUser from './components/RegisterUser.js';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import Contact from './components/Contact';
@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import InputForm from './components/inputForm';
 import Home from './components/Home';
 import Rental from './components/Rental';
-
+import Userprofile from './components/Userprofile';
 
 
 
@@ -36,6 +36,9 @@ function App() {
           <Route exact path="/rentals">
             <Rental />
           </Route>
+          <Route exact path="Profile">
+            <Userprofile />
+          </Route>
           <Route exact path="/register">
             <RegisterUser />
           </Route>
@@ -52,8 +55,9 @@ function App() {
         <br />
         <br />
         <br />
-        {/* <Footer /> */}
-
+      </div>
+      <div>
+        <Footer />
       </div>
     </Router>
   );

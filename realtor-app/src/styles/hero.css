@@ -1,4 +1,5 @@
 .hero-container {
+  font-family: 'Josefin Sans', sans-serif;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -29,17 +30,17 @@
   flex-direction: column;
 }
 
-p {
-  font-size: 15px;
-  margin-bottom: 0%;
-  color: white;
-}
-
 .inputs input {
   border-radius: 5px;
   border: none;
   height: 25px;
   background-color: rgb(62, 126, 161);
+}
+
+p {
+  font-size: 15px;
+  margin-bottom: 0%;
+  color: white;
 }
 
 #submit {
@@ -60,7 +61,6 @@ p {
 #register {
   text-align: center;
 }
-
 #create-account {
   border-radius: 10px;
   border: none;
@@ -82,6 +82,8 @@ a {
 
 h2 {
   color: white;
+  font-size: 40px;
+  
 }
 
 h3 {

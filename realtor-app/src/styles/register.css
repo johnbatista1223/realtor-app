@@ -4,6 +4,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 30%;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .register {
@@ -25,6 +26,10 @@
 }
 
 .inputs input {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
     border-radius: 5px;
     border: none;
     height: 25px;
