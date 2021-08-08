@@ -3,10 +3,11 @@ import '../styles/footer.css';
 
 //random note
 function Footer() {
+
   return (
-    <div class="footer-wrapper">
+    <div class="footer container">
       {/* <div class="row"> */}
-        <div class="col-lg-4 col-md-6 col-sm-7">
+        <div class="">
           <div class="footer__about">
             <div class="footer__logo">
               <a class="navbar-brand custom-logo" href="/">Home Page</a>
@@ -16,7 +17,7 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div class="col-lg-2 col-md-3 col-sm-5">
+        <div class="">
           <div class="footer__widget">
             <h6>Quick links</h6>
             <ul>
@@ -25,7 +26,7 @@ function Footer() {
             </ul>
           </div>
         </div>
-        <div class="col-lg-4 col-md-8 col-sm-8">
+        <div class="">
           <div class="footer__newslatter">
             <h6>NEWSLETTER</h6>
             <form action="#">
@@ -43,7 +44,7 @@ function Footer() {
           </div>
         {/* </div> */}
         {/* <div class="row"> */}
-          <div class="col-lg-12">
+          <div class="">
             <div class="footer__copyright__text">
               <small>Copyright © Home Page
                 2021 All rights reserved | This site was made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://github.com/johnbatista1223/realtor-app"> Ashleigh Freilder John Batista Amy Smerlick Raquan Stanley</a>
@@ -56,4 +57,4 @@ function Footer() {
 }
 
 
-      export default Footer
+export default Footer

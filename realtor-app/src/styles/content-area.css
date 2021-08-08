@@ -160,18 +160,18 @@
   -moz-border-radius-topright: 5px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7711f4+0,c204f2+100 */
   background: rgba(119, 17, 244, .8);
-  /* Old browsers */
+
   background: -moz-linear-gradient(-45deg, rgba(119, 17, 244, .8) 0%, rgba(194, 4, 242, .8) 100%);
-  /* FF3.6-15 */
+
   background: -webkit-linear-gradient(-45deg, rgba(119, 17, 244, .8) 0%, rgba(194, 4, 242, .8) 100%);
-  /* Chrome10-25,Safari5.1-6 */
+
   background: linear-gradient(135deg, rgba(119, 17, 244, .8) 0%, rgba(194, 4, 242, .8) 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7711f4', endColorstr='#c204f2',GradientType=1);
-  /* IE6-9 fallback on horizontal gradient */
+
 }
+
 #listings .listings-results .listing-img .details .user-img-box {
   width: 35px;
   height: 35px;
