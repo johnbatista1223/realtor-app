@@ -13,7 +13,7 @@ const QuanContact = () => {
             alt="picture"
           />
           <h4>
-            bio
+            Hey, my name is Raquan Stanley
           </h4>
           <hr className="" />
           <h3>Cell Phone</h3>
@@ -25,7 +25,7 @@ const QuanContact = () => {
           <h3>E-mail</h3>
           <hr className="" />
           <a href="mailto:batistaj651@gmail.com">
-            <div icon="envelope" /> batistaj651@gmail.com
+            <div icon="envelope" /> stanley.raquan@gmail.com
           </a>
        </div>
       

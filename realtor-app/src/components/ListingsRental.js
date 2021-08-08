@@ -1,18 +1,18 @@
 import React, { Component } from 'react'
 
-export class Listings extends Component {
+export class ListingsRental extends Component {
 
   constructor() {
     super()
-    this.loopListings = this.loopListings.bind(this)
+    this.loopListingsRental = this.loopListingsRental.bind(this)
   }
 
-  loopListings() {
-    const { listingsData } = this.props
+  loopListingsRental() {
+    const { listingsRentalData } = this.props
 
     
 
-    return listingsData.map((listing, index) => {
+    return listingsRentalData.map((listing, index) => {
       if (this.props.globalState.view === 'box') {
         // THIS IS THE BOX VIEW
         return (
@@ -27,7 +27,7 @@ export class Listings extends Component {
 
                   <div className="col-md-9">
                     <div className="user-details">
-                      <span className="user-name">john batista</span>
+                      <span className="user-name">Nina Jones</span>
                       <span className="post-date">05/05/2018</span>
                     </div>
                     <div className="listing-details">
@@ -117,7 +117,7 @@ export class Listings extends Component {
           </div>
         </section>
         <section className="listings-results">
-          {this.loopListings()}
+          {this.loopListingsRental()}
         </section>
         <section id="pagination">
           <ul className="pages">
@@ -135,4 +135,4 @@ export class Listings extends Component {
   }
 }
 
-export default Listings
+export default ListingsRental

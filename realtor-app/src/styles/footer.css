@@ -1,0 +1,8 @@
+.footer-wrapper, .footer__about, .footer__widget {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: red;
+
+}
+

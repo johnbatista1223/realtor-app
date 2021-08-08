@@ -1,17 +1,15 @@
 import React from 'react';
 import Filter from '../components/Filter'
-import Listings from '../components/Listings'
-import '../styles/grid.css';
-import '../styles/listings.css';
-import '../styles/content-area.css';
+import ListingsRental from '../components/ListingsRental'
+import '../styles/main.css';
 
-import listingsData from '../Data/ListingsData'
+import listingsRentalData from '../Data/ListingsRentalData'
 
-class Home extends React.Component {
+class Rental extends React.Component {
   constructor() {
     super()
     this.state = {
-      listingsData: listingsData,
+      listingsRentalData: listingsRentalData,
       neighbourhood: 'all',
       housetype: 'all',
       bedrooms: 1,
@@ -23,7 +21,7 @@ class Home extends React.Component {
       swimming_pool: false,
       finished_basement: false,
       gym: false,
-      filteredData: listingsData,
+      filteredData: listingsRentalData,
       populateFormsData: '',
       sortby: 'price-asc',
       view: 'box',
@@ -39,12 +37,12 @@ class Home extends React.Component {
   componentWillMount() {
 
     // arrange according to their price
-    var listingsData = this.state.listingsData.sort((a, b) => {
+    var listingsRentalData = this.state.listingsRentalData.sort((a, b) => {
       return a.price - b.price
     })
 
     this.setState({
-      listingsData
+      listingsRentalData
     })
   }
 
@@ -67,7 +65,7 @@ class Home extends React.Component {
   }
 
   filteredData() {
-    var newData = this.state.listingsData.filter((item) => {
+    var newData = this.state.listingsRentalData.filter((item) => {
       return item.price >= this.state.min_price
         && item.price <= this.state.max_price
         && item.floorSpace >= this.state.min_floor_space
@@ -145,7 +143,7 @@ class Home extends React.Component {
   populateForms() {
 
     //neighbourhoods
-    var cities = this.state.listingsData.map(item => (
+    var cities = this.state.listingsRentalData.map(item => (
       item.city
     ))
     cities = new Set(cities) /* !! Removes Duplicate Entries. Only Unique left !! */
@@ -154,7 +152,7 @@ class Home extends React.Component {
     cities = cities.sort()
 
     //housetypes
-    var housetypes = this.state.listingsData.map(item => (
+    var housetypes = this.state.listingsRentalData.map(item => (
       item.housetype
     ))
     housetypes = new Set(housetypes)
@@ -163,7 +161,7 @@ class Home extends React.Component {
     housetypes = housetypes.sort()
 
     //bedrooms
-    var bedrooms = this.state.listingsData.map(item => (
+    var bedrooms = this.state.listingsRentalData.map(item => (
       item.rooms
     ))
     bedrooms = new Set(bedrooms)
@@ -185,11 +183,11 @@ class Home extends React.Component {
       <div className="App">
         <section>
           <Filter change={this.change} globalState={this.state} populateAction={this.populateForms} />
-          <Listings listingsData={this.state.filteredData} change={this.change} globalState={this.state} changeView={this.changeView} />
+          <ListingsRental listingsRentalData={this.state.filteredData} change={this.change} globalState={this.state} changeView={this.changeView} />
         </section>
       </div>
     );
   }
 }
 
-export default Home;
+export default Rental;
