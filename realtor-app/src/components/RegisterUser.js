@@ -14,12 +14,13 @@ const RegisterUser = () => {
                         <p>Email</p>
                         <input id="email" type="text" placeholder=" Type your email here..." />
                         <p>Password</p>
-                        <input id="password" type="text" placeholder=" Type your password here..." />
+                        <input id="password" type="password" placeholder=" Type your password here..." />
                         <p>Confirm Password</p>
-                        <input id="confirm-password" type="text" placeholder=" Confirm your password here..." />
+                        <input id="confirm-password" type="password" placeholder=" Confirm your password here..." />
                     </div>
                     <div class="reg-button">
-                        <button id="register-submit" type="submit">Submit</button>
+                    <a href="/Profile">
+                        <button id="register-submit" type="submit">Submit</button></a>
                     </div>
                 </div>
             </div>
