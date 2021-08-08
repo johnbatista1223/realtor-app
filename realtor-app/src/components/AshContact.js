@@ -1,6 +1,7 @@
 import React from "react";
 import AshleighPic from '../images/AshleighPic.png';
 
+
 const AshContact = () => {
   return (
     <div className="text-center">

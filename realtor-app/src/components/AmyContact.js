@@ -1,5 +1,5 @@
 import React from "react";
-
+import Headshot from '../images/Headshot.jpg';
 
 const AmyContact = () => {
   return (
@@ -7,8 +7,8 @@ const AmyContact = () => {
           <h2>Contact Information</h2>
           <hr class="" />
           <img
-            style={{ height: "250px" }}
-            src=""
+            style={{ height: "200px" }}
+            src={Headshot}
             class=""
             alt="picture"
           />
@@ -24,9 +24,7 @@ const AmyContact = () => {
           <hr className="" />
           <h3>E-mail</h3>
           <hr className="" />
-          <a href="mailto:batistaj651@gmail.com">
-            <div icon="envelope" /> batistaj651@gmail.com
-          </a>
+          <div icon="envelope" /> batistaj651@gmail.com
        </div>
       
   );

@@ -1,4 +1,5 @@
 .hero-container {
+  font-family: 'Josefin Sans', sans-serif;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -28,22 +29,18 @@
   display: flex;
   flex-direction: column;
 }
-<<<<<<< HEAD
-.inputs p {
-=======
-
-p {
->>>>>>> 6625534f84c157d55995154f100d9c9067541598
-  font-size: 15px;
-  margin-bottom: 0%;
-  color: white;
-}
 
 .inputs input {
   border-radius: 5px;
   border: none;
   height: 25px;
   background-color: rgb(62, 126, 161);
+}
+
+p {
+  font-size: 15px;
+  margin-bottom: 0%;
+  color: white;
 }
 
 #submit {
@@ -64,10 +61,6 @@ p {
 #register {
   text-align: center;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 6625534f84c157d55995154f100d9c9067541598
 #create-account {
   border-radius: 10px;
   border: none;
@@ -82,19 +75,15 @@ p {
 a {
   text-align: center;
 }
-<<<<<<< HEAD
-#recover:visited {
-  color: white;
-}
-=======
 
 #recover:visited {
   color: white;
 }
 
->>>>>>> 6625534f84c157d55995154f100d9c9067541598
 h2 {
   color: white;
+  font-size: 40px;
+  
 }
 
 h3 {

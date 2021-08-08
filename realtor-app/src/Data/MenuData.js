@@ -3,4 +3,5 @@ export const menuData =[
   {title:"Rentals", link:"/rentals"},
   {title:"Contact us", link:"/contact"},
   {title:"Register", link:"/Register"},
+  {title:"Profile", link:"/Userprofile"},
 ]

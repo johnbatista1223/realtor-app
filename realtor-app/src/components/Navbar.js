@@ -15,7 +15,7 @@ display:flex;
 justify-content: space-between;
 padding: 1rem 2rem;
 z-index:100;
-background-color:rgb(62, 126, 161);
+background-color:rgba(23, 45, 79, 1);
 width:100%;
 font-size: 25px;
 .heart {
