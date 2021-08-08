@@ -5,6 +5,7 @@
   transform: translate(-50%, -50%);
   width: 30%;
 }
+
 .login {
   display: flex;
   flex-direction: column;
@@ -12,29 +13,39 @@
   padding: 30px;
   border-radius: 5px;
 }
+
 .title {
   text-align: center;
   color: white;
 }
+
 .signin {
   display: flex;
   flex-direction: column;
 }
+
 .inputs {
   display: flex;
   flex-direction: column;
 }
+<<<<<<< HEAD
 .inputs p {
+=======
+
+p {
+>>>>>>> 6625534f84c157d55995154f100d9c9067541598
   font-size: 15px;
   margin-bottom: 0%;
   color: white;
 }
+
 .inputs input {
   border-radius: 5px;
   border: none;
   height: 25px;
   background-color: rgb(62, 126, 161);
 }
+
 #submit {
   border-radius: 10px;
   border: none;
@@ -45,12 +56,18 @@
   background-color: rgb(9, 86, 249);
   color: white;
 }
+
 #login-button {
   text-align: center;
 }
+
 #register {
   text-align: center;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6625534f84c157d55995154f100d9c9067541598
 #create-account {
   border-radius: 10px;
   border: none;
@@ -61,21 +78,33 @@
   background-color: rgb(9, 86, 249);
   color: white;
 }
+
 a {
   text-align: center;
 }
+<<<<<<< HEAD
 #recover:visited {
   color: white;
 }
+=======
+
+#recover:visited {
+  color: white;
+}
+
+>>>>>>> 6625534f84c157d55995154f100d9c9067541598
 h2 {
   color: white;
 }
+
 h3 {
   color: white;
 }
+
 ::placeholder {
   color: lightgray;
 }
+
 @media screen and (min-width: 992px) {
   .miniHero {
     background-position-y: -150px;
