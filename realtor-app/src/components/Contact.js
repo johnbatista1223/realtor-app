@@ -5,7 +5,6 @@ import JohnsContact from './JohnContact';
 import AmyContact from './AmyContact';
 import AshContact from './AshContact';
 import QuanContact from './QuanContact';
-import '../styles/Contacts.css';
 
 
 const Contact = () => {
