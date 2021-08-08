@@ -17,7 +17,7 @@ const Home = () => {
   const { loggedIn } = useContext(UserContext)
 
   const [ listings, setListings ] = useState([])
-  const [ searchField, setSearchField ] = useState("Akron, Oh")
+  const [ searchField, setSearchField ] = useState("")
 
   // useEffect(() => {
 
