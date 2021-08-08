@@ -5,7 +5,7 @@ function Hero() {
     <div class="hero-container">
       <div class="login">
         <div class="title">
-          <h2>Login to HomePage</h2>
+          <h1>Login to HomePage</h1>
         </div>
         <div class="signin">
           <div class="inputs">
