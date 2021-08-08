@@ -10,8 +10,8 @@ import InputForm from './components/inputForm';
 import Home from './components/Home';
 import Rental from './components/Rental';
 import Userprofile from './components/Userprofile';
-import { UserContext } from './context/UserProvider'
-import "./App.css"
+import { UserContext } from './context/UserProvider';
+import "./App.css";
 
 
 
