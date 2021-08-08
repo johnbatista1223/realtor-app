@@ -4,7 +4,7 @@ import Hero from './components/Hero/Hero';
 import Footer from './components/Footer';
 import RegisterUser from './components/Register/RegisterUser.js';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
-import Contact from './components/Contact';
+import Contact from './components/Contact/Contact';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import InputForm from './components/inputForm';
 import Home from './components/Home';
