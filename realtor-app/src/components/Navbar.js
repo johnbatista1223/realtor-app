@@ -46,8 +46,10 @@ const NavLink = css`
  padding: 0 2rem;
  height:100%;
  cursor:pointer;
+ transition: .5s all ease-in-out;
  text-decoration:none;
  font-weight:bold;
+
 `
 const Logo = styled(Link)`
 
