@@ -4,7 +4,7 @@ const typeDefs = gql`
   # Define which fields are accessible from the Class model
   type User {
     _id: ID
-    name: String
+    username: String
     email: String
     password: String
   }
@@ -14,8 +14,13 @@ const typeDefs = gql`
     users: [User]
   }
 
+  type Auth {
+    token: ID!
+    user: User
+  }
+
   type Mutation {
-    createUser(name: String!, password: String!, email: String!): User
+    createUser(username: String!, email: String!, password: String!): Auth
   }
 `;
 

@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt')
-const withAuth = require('../../utils/auth');
+const withAuth = require('../utils/auth');
 
 const userSchema = new Schema(
   {
@@ -23,7 +23,9 @@ const userSchema = new Schema(
   }
 );
 
-userSchema.pre("save", async (next) => {
+
+
+userSchema.pre("save", async function (next) {
 
   if (!this.isModified("password")) return next()
   try {

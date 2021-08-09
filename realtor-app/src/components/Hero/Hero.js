@@ -1,7 +1,14 @@
 import React from 'react';
 import './hero.css';
+import { useMutation } from '@apollo/client';
+import { CREATE_USER } from '../../utils/mutations';
+
 function Hero() {
+
+  const [create, { error, data }] = useMutation(CREATE_USER);
+
   return (
+    <div className="hero-container-outer">
     <div class="hero-container">
       <div class="login">
         <div class="title">
@@ -38,6 +45,14 @@ function Hero() {
           </div>
         </div>
       </div>
+    </div>
+    <button onClick={async () => {
+
+      const { data } = await create({
+        variables: { email: "jdoe@test.com", username: "jdoe", password: "Test1234" }
+      });
+
+    }}>TEST</button>
     </div>
   )
 }
