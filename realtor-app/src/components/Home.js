@@ -8,22 +8,24 @@ import '../styles/home.css'
 import { UserContext } from '../context/UserProvider'
 import axios from 'axios'
 //import listingsData from '../Data/ListingsData'
+import { FaHeart } from "react-icons/fa"
+
 const Home = () => {
   const { loggedIn } = useContext(UserContext)
-  const [ listings, setListings ] = useState([])
-  const [ stateCode, setStateCode ] = useState("MI")
-  const [ city, setCity ] = useState("Michigan")
-  const [ priceLow, setPriceLow ] = useState(0)
-  const [ priceHigh, setPriceHigh ] = useState(800000)
-  
+  const [listings, setListings] = useState([])
+  const [stateCode, setStateCode] = useState("MI")
+  const [city, setCity] = useState("Michigan")
+  const [priceLow, setPriceLow] = useState(0)
+  const [priceHigh, setPriceHigh] = useState(800000)
+
   useEffect(() => {
     //Get listings
-    console.log(priceLow, priceHigh)
+    console.log(priceLow, priceHigh, city, stateCode)
     
     var options = {
       method: 'GET',
       url: 'https://us-real-estate.p.rapidapi.com/for-sale',
-      params: {offset: '0', limit: '10', price_min: priceLow, price_max: priceHigh, state_code: stateCode, city: city, sort: 'newest'},
+      params: { offset: '0', limit: '10', price_min: priceLow, price_max: priceHigh, state_code: stateCode, city: city, sort: 'newest' },
       headers: {
         'x-rapidapi-key': '0a2e315049msh032e93ea820f37fp14695bjsn4bfb09912ad0',
         'x-rapidapi-host': 'us-real-estate.p.rapidapi.com'
@@ -35,8 +37,9 @@ const Home = () => {
     }).catch(function (error) {
       console.error(error);
     });
-  }, [priceLow, priceHigh])
+  }, [priceLow, priceHigh, city, stateCode])
   
+
   // constructor() {
   //   super()
   //   this.state = {
@@ -119,7 +122,7 @@ const Home = () => {
   //     newData = newData.filter(item => {
   //       var city = item.city.toLowerCase()
   //       var searchText = this.state.search.toLowerCase()
-        
+
   //       if(city.match(searchText) !== null) {
   //         return true
   //       } else {
@@ -181,30 +184,33 @@ const Home = () => {
   //     }
   //   })
   // }
+
     return (
       <div className="for-sale">
         <div className="filter-wrapper">
-        <Filter updateFilters={(priceLow, priceHigh) => {
+        <Filter updateFilters={(priceLow, priceHigh, city, state) => {
           console.log("update")
           setPriceLow(parseInt(priceLow))
           setPriceHigh(parseInt(priceHigh))
+          setCity(city)
+          setStateCode(state)
         }} />
-        </div>
-        <div className="listings-wrapper">
-        
-          <div className="listing-results-wrapper">
+      </div>
+      <div className="listings-wrapper">
+
+        <div className="listing-results-wrapper">
           {listings.map((listing, index) => {
             return <ListingEntry key={index} listing={listing} />
           })}
-          </div>
         </div>
-        <section>
-        
-        {/* <Listings listingsData={this.state.filteredData} change={this.change} globalState={this.state} changeView={this.changeView} /> */}
-        </section>
       </div>
-    );
-  
+      <section>
+
+        {/* <Listings listingsData={this.state.filteredData} change={this.change} globalState={this.state} changeView={this.changeView} /> */}
+      </section>
+    </div>
+  );
+
 }
 export default Home;
 Home.defaultProps = {
@@ -216,19 +222,25 @@ const ListingEntry = (props) => {
     <div className="listing-card">
       <div className="image">
         {
-          props.listing.primary_photo !== null ?  <img src={props.listing.primary_photo.href} /> : <span> NO PHOTO AVAILABLE</span>
+          props.listing.primary_photo !== null ? <img src={props.listing.primary_photo.href} /> : <span> NO PHOTO AVAILABLE</span>
         }
-       
+
       </div>
       <div className="details">
+
+        <div className="fa-icons">
+          <div className="contact-icon">
+            <a className="contact-icons fa-heart" href="/Profile"><FaHeart size={30} /></a>
+          </div>
+        </div>
         <div className="price">
           ${props.listing.list_price}
         </div>
         <div className="location">
           {props.listing.location.address.city}, {props.listing.location.address.state_code}
         </div>
+
       </div>
-      
     </div>
   )
 }

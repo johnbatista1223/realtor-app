@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/hero.css';
+import './hero.css';
 function Hero() {
   return (
     <div class="hero-container">
@@ -25,7 +25,7 @@ function Hero() {
           <a href="" id="recover">Forgot your password?</a>
           <div id="login-button">
             <a href="/Profile">
-            <button id="submit" type="submit">Submit</button></a>
+              <button id="submit" type="submit">Submit</button></a>
           </div>
           <div id="register">
             <h3>Or create an account</h3>
@@ -33,7 +33,7 @@ function Hero() {
 
 
             <a href="/Register">
-            <button id="create-account" type="submit">Register</button></a>
+              <button id="create-account" type="submit">Register</button></a>
 
           </div>
         </div>

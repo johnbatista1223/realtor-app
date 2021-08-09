@@ -1,5 +1,5 @@
 import React from "react";
-import '../styles/contact-each.css';
+import './contact-each.css';
 
 import Headshot from '../images/Headshot.jpg';
 import { FaGithub } from "react-icons/fa"
@@ -18,8 +18,8 @@ const AmyContact = () => {
         />
         <div className="bio">
           <p>
-            <span class="first-letter">Y</span>our text here
-        Currently located in Philadelphia, you can find Ashleigh living with her faithful blue nose pittie. She is driven by an insatiable curiousity that requires a constant stream of learning. When not working she is honing her skills, working out, cooking new dishes, and exploring both in the city and out.</p>
+            <span class="first-letter">H</span>ello, my name is Amy Smerlick, a current student of University of Pennsylvania Full Stack Coding Bootcampt. I reside in Central Pennsylvania, where I own and operate a nursing business, and practice Real Estate in my free time. I am
+                excited to refine my skills with the right company and look forward to growing in this field.</p>
           <div className="fa-icons">
             <div className="contact-icon">
               <a className="contact-icons" href="https://github.com/"><FaGithub size={30} /></a>

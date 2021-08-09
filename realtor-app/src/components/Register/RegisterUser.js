@@ -1,6 +1,5 @@
 import React from 'react';
-import '../styles/register.css';
-
+import './register.css';
 const RegisterUser = () => {
     return (
         <div className="registration">
@@ -20,8 +19,8 @@ const RegisterUser = () => {
                         <input id="confirm-password" type="password" placeholder=" Confirm your password here..." />
                     </form>
                     <div class="reg-button">
-                    <a href="/Profile">
-                        <button id="register-submit" type="submit">Submit</button></a>
+                        <a href="/Profile">
+                            <button id="register-submit" type="submit">Submit</button></a>
                     </div>
                 </div>
             </div>
