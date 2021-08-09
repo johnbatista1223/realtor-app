@@ -4,7 +4,7 @@ const withAuth = require('../../utils/auth');
 
 const userSchema = new Schema(
   {
-    name: {
+    username: {
       type: String,
       required: true,
       unique: true,

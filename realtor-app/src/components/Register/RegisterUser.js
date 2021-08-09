@@ -8,16 +8,16 @@ const RegisterUser = () => {
                     <h1>Register with HomePage</h1>
                 </div>
                 <div class="info">
-                    <div class="inputs">
+                    <form class="inputs" method ="post" action ='/'>
                         <p>Username</p>
-                        <input id="username" type="text" placeholder=" Type your username here..." />
+                        <input id="username" type="text" placeholder=" Type your username here..." name='username' />
                         <p>Email</p>
-                        <input id="email" type="text" placeholder=" Type your email here..." />
+                        <input id="email" type="text" placeholder=" Type your email here..." name = 'email'/>
                         <p>Password</p>
-                        <input id="password" type="password" placeholder=" Type your password here..." />
+                        <input id="password" type="password" placeholder=" Type your password here..." name = 'password'/>
                         <p>Confirm Password</p>
                         <input id="confirm-password" type="password" placeholder=" Confirm your password here..." />
-                    </div>
+                    </form>
                     <div class="reg-button">
                         <a href="/Profile">
                             <button id="register-submit" type="submit">Submit</button></a>
