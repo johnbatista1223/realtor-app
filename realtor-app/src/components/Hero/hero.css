@@ -14,12 +14,10 @@
   padding: 30px;
   border-radius: 5px;
 }
-
 .title {
   text-align: center;
   color: white;
 }
-
 .signin {
   display: flex;
   flex-direction: column;
@@ -53,11 +51,9 @@ p {
   background-color: rgb(9, 86, 249);
   color: white;
 }
-
 #login-button {
   text-align: center;
 }
-
 #register {
   text-align: center;
 }
@@ -85,15 +81,12 @@ h2 {
   font-size: 40px;
   
 }
-
 h3 {
   color: white;
 }
-
 ::placeholder {
   color: lightgray;
 }
-
 @media screen and (min-width: 992px) {
   .miniHero {
     background-position-y: -150px;

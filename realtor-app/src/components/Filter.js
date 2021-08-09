@@ -63,7 +63,7 @@ const Filter = (props) => {
           <div className="location">
             <div className="location-group">
             <label for="city-input">City</label>
-            <input className="city-input" id="city-input" type="text" onChange={(e) => {
+            <input className="city-input" placeholder="Search ..." id="city-input" type="text" onChange={(e) => {
               setCity(e.target.value)
             }}/>
             </div>
