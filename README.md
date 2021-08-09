@@ -7,6 +7,7 @@
 
 
 # 🏡 **Home Page** 🏡
+<p> A full-stack application using MongoDB, Express. js, React. js, and Node. js (MERN) that allows a user to create an account in order to search for properties that are for sale and available rentals. </p>
 
 # **Description**
 <p>Millions of shoppers are looking for their first, next, forever, and even their temporary homes on any given day. Home Page is an app devised to offer customers with an on-demand availability of the housing market. </p>
