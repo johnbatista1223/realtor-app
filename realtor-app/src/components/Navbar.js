@@ -37,8 +37,7 @@ font-size: 25px;
   100% {
     transform: scale(1);
   }
-}
-`
+}`
 
 const NavLink = css`
  color:#FFFFFF;

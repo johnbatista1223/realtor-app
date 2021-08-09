@@ -188,7 +188,15 @@
   background: -webkit-linear-gradient(-45deg, rgba(119, 17, 244, .8) 0%, rgba(194, 4, 242, .8) 100%);
   background: linear-gradient(135deg, rgba(119, 17, 244, .8) 0%, rgba(194, 4, 242, .8) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7711f4', endColorstr='#c204f2',GradientType=1);
+
 }
+
+.fa-icons .fa-heart{
+  color:  red;
+  filter: drop-shadow(5px 2.5px 1px pink);
+  justify-content: right;
+}
+
 #listings .listings-results .listing-img .details .user-img-box {
   width: 35px;
   height: 35px;

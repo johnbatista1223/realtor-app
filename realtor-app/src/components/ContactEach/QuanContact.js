@@ -1,5 +1,5 @@
 import React from "react";
-import '../styles/contact-each.css';
+import './contact-each.css';
 
 import JohnsPic from '../images/john.jpg';
 import { FaGithub } from "react-icons/fa"

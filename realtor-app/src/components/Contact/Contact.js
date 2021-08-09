@@ -1,10 +1,10 @@
 import React from "react";
-import '../styles/contact.css';
+import './contact.css';
 
-import JohnsContact from './JohnContact';
-import AmyContact from './AmyContact';
-import AshContact from './AshContact';
-import QuanContact from './QuanContact';
+import JohnsContact from '../ContactEach/JohnContact';
+import AmyContact from '../ContactEach/AmyContact';
+import AshContact from '../ContactEach/AshContact';
+import QuanContact from '../ContactEach/QuanContact';
 
 
 const Contact = () => {

@@ -14,7 +14,7 @@ function Footer() {
                     <li><a href="/Contact">Mission</a></li>
                     <li><a href="/Contact">Services</a></li>
                     <li><a href="/Contact">Social</a></li>
-                    <li><a href="/Contact">Get in Touch</a></li>
+                    <li><a href="/Contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col">
@@ -24,7 +24,7 @@ function Footer() {
                     <li><a href="/Homes">Mission</a></li>
                     <li><a href="/Homes">Services</a></li>
                     <li><a href="/Homes">Social</a></li>
-                    <li><a href="/Homes">Get in Touch</a></li>
+                    <li><a href="/Homes">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col">
@@ -34,7 +34,7 @@ function Footer() {
                     <li><a href="/Rentals">Mission</a></li>
                     <li><a href="/Rentals">Services</a></li>
                     <li><a href="/Rentals">Social</a></li>
-                    <li><a href="/Rentals">Get in Touch</a></li>
+                    <li><a href="/Rentals">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col social">
