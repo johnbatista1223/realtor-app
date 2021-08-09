@@ -1,4 +1,5 @@
 import React, {useState } from 'react'
+import  '../styles/button.css';
 const Filter = (props) => {
   const [ priceLow, setPriceLow ] = useState("0")
   const [ priceHigh, setPriceHigh ] = useState("800000")
@@ -160,7 +161,7 @@ const Filter = (props) => {
             <input type="text" name="max_floor_space" className="max-floor-space" onChange={this.props.change} value={this.props.globalState.max_floor_space} />
           </div> */}
           <div className="filters extras">
-            <span className="title">Extras</span>
+            <span  style={{color: "black"}}className="title">Extras</span>
             <label htmlFor="extras">
               <span>Elevators</span>
               <input type="checkbox" name="elevator" value="elevator" onChange={() => {console.log("elevator change")}} />
@@ -179,9 +180,9 @@ const Filter = (props) => {
             </label>
           </div>
         </div>
-        <button onClick={() => {
+        <button className ='apply-btn' onClick={() => {
           console.log("Click");
-          props.updateFilters(priceLow, priceHigh, city, state)}}>Apply Filters</button>
+          props.updateFilters(priceLow, priceHigh, city, state)}}>Submit</button>
       </section>
       
     )
