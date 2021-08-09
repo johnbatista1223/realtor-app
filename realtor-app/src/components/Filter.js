@@ -53,14 +53,6 @@ const Filter = (props) => {
             <option value="all" selected>Any Neighbourhood</option>
             {this.cities()}
           </select> */}
-          <select name="housetype" className="filters housetype" onChange={() => {console.log("test")}}>
-            <option value="all" selected>All House Types</option>
-            {housetypes()}
-          </select>
-          <select name="bedrooms" className="filters bedrooms" onChange={() => {console.log("test")}}>
-            <option value="0" selected>0+ BR</option>
-            {bedrooms()}
-          </select>
           <div className="location">
             <div className="location-group">
             <label for="city-input">City</label>
@@ -131,6 +123,15 @@ const Filter = (props) => {
             </select>
             </div>
           </div>
+          <select name="housetype" className="filters housetype" onChange={() => {console.log("test")}}>
+            <option value="all" selected>All House Types</option>
+            {housetypes()}
+          </select>
+          <select name="bedrooms" className="filters bedrooms" onChange={() => {console.log("test")}}>
+            <option value="0" selected>0+ BR</option>
+            {bedrooms()}
+          </select>
+          
           <div className="filters price">
             <span style={{color: "black", "textAlign": "left"}} className="title">Price</span>
             <input type="text" name="min_price" className="min-price" onChange={(e) => {
