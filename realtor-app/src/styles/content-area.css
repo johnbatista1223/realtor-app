@@ -76,6 +76,29 @@
   font-weight: 300;
   color: #c8c8c8;
 }
+
+.location {
+
+  display: flex;
+  flex-direction: column;
+
+}
+.location .location-group {
+
+
+}
+.city-input {
+
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 0.4rem;
+  width: 38%;
+  display: inline-block;
+  margin-right: 2.5%;
+  margin-bottom: 3.5rem;
+  color: #828d9d;
+
+}
 #listings .sortby-area {
   margin-bottom: 20px;
 }
