@@ -2,14 +2,17 @@ import React, { useState } from 'react';
 import './register.css';
 import { useMutation } from '@apollo/client';
 import { CREATE_USER } from '../../utils/mutations';
+import { useHistory } from 'react-router-dom'
 import Auth from '../../utils/auth'
 
 
 
   
-const RegisterUser = () => {
+const RegisterUser = (props) => {
 
     const [create, { error, data }] = useMutation(CREATE_USER);
+
+    let history = useHistory()
 
     const [email, setEmail] = useState("")
     const [ username, setUsername ] = useState("")
@@ -72,8 +75,9 @@ const RegisterUser = () => {
                                         const { data } = await create({
                                             variables: { email: email, username: username, password: password }
                                             });
-                                  
-                                        //Auth.login(data.login.token);
+                                            console.log(data)
+                                        
+                                        history.push("/")
                                       } catch (e) {
                                           console.log("ERROR")
                                         console.error(e);
