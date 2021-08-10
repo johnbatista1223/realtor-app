@@ -84,11 +84,14 @@ const Home = () => {
   );
 
 }
-export default Home;
+
 Home.defaultProps = {
   listings: []
 }
 const ListingEntry = (props) => {
+  const saveFavorite = () => {
+    console.log("saveFavorite")
+  }
   console.log(props.listing)
   return (
     <div className="listing-card">
@@ -102,7 +105,7 @@ const ListingEntry = (props) => {
 
         <div className="fa-icons">
           <div className="contact-icon">
-            <a className="contact-icons fa-heart" href="/Profile"><FaHeart size={30} /></a>
+            <div className="contact-icons fa-heart" onClick={saveFavorite}><FaHeart size={30} /></div>
           </div>
         </div>
         <div className="price">
@@ -116,3 +119,5 @@ const ListingEntry = (props) => {
     </div>
   )
 }
+
+export default Home;

@@ -11,10 +11,10 @@ const RegisterUser = () => {
 
     const [create, { error, data }] = useMutation(CREATE_USER);
 
-    const [email, setEmail] = useState("rdear4@gmail.com")
-    const [ username, setUsername ] = useState("rdear")
-    const [ password, setPassword ] = useState("test1234")
-    const [pwConfirm, setPWConfirm ] = useState("test1234")
+    const [email, setEmail] = useState("")
+    const [ username, setUsername ] = useState("")
+    const [ password, setPassword ] = useState("")
+    const [pwConfirm, setPWConfirm ] = useState("")
 
     return (
         <div className="registration-container-outer">
