@@ -107,6 +107,12 @@ color: white;
   -webkit-transition: .1s;
   -moz-transition: .1s;
 }
+
+svg:hover path {
+  fill: lime;
+}
+
+
 .clearfix {
   clear: both;
 }

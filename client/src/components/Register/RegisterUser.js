@@ -2,14 +2,15 @@ import React, { useState } from 'react';
 import './register.css';
 import { useMutation } from '@apollo/client';
 import { CREATE_USER } from '../../utils/mutations';
-import Auth from '../../utils/auth'
-
-
+import { useHistory } from 'react-router-dom'
+import Auth from '../../utils/auth';
 
   
-const RegisterUser = () => {
+const RegisterUser = (props) => {
 
     const [create, { error, data }] = useMutation(CREATE_USER);
+
+    let history = useHistory()
 
     const [email, setEmail] = useState("")
     const [ username, setUsername ] = useState("")
@@ -24,32 +25,31 @@ const RegisterUser = () => {
                     <h1>Register with HomePage</h1>
                 </div>
                 <div class="info">
-                    <form class="inputs">
-                        <p>Username</p>
-                        <input id="username" type="text" placeholder=" Type your username here..." name='username'value={username} onChange={(e) => {
+                        <form class="inputs">
+                            <p>Username</p>
+                            <input id="username" type="text" placeholder=" Type your username here..." name='username' value={username} onChange={(e) => {
 
-                            setUsername(e.target.value)
-                            
-                        }}/>
-                        <p>Email</p>
-                        <input id="email" type="text" placeholder=" Type your email here..." name = 'email' value={email} onChange={(e) => {
-                            setEmail(e.target.value)
-                            
-                        }}/>
-                        <p>Password</p>
-                        <input id="password" type="password" placeholder=" Type your password here..." name = 'password' value={password} onChange={(e) => {
+                                setUsername(e.target.value)
 
-                            setPassword(e.target.value)
-                        }}/>
-                        <p>Confirm Password</p>
-                        <input id="confirm-password" type="password" placeholder=" Confirm your password here..." value={pwConfirm} onChange={(e) => {
+                            }} />
+                            <p>Email</p>
+                            <input id="email" type="text" placeholder=" Type your email here..." name='email' value={email} onChange={(e) => {
+                                setEmail(e.target.value)
 
-                            setPWConfirm(e.target.value)
+                            }} />
+                            <p>Password</p>
+                            <input id="password" type="password" placeholder=" Type your password here..." name='password' value={password} onChange={(e) => {
 
-                        }}/>
-                    </form>
+                                setPassword(e.target.value)
+                            }} />
+                            <p>Confirm Password</p>
+                            <input id="confirm-password" type="password" placeholder=" Confirm your password here..." value={pwConfirm} onChange={(e) => {
+
+                                setPWConfirm(e.target.value)
+
+                            }} />
+                        </form>
                     <div class="reg-button">
-                      
                             <button id="register-submit" type="submit" onClick={async (e) => {
 
                                 e.preventDefault()
@@ -72,8 +72,9 @@ const RegisterUser = () => {
                                         const { data } = await create({
                                             variables: { email: email, username: username, password: password }
                                             });
-                                  
-                                        //Auth.login(data.login.token);
+                                            console.log(data)
+                                        
+                                        history.push("/")
                                       } catch (e) {
                                           console.log("ERROR")
                                         console.error(e);
@@ -86,7 +87,7 @@ const RegisterUser = () => {
 
                                 
 
-                                }}>Submit</button>
+                                }}> Submit</button>
                     </div>
                 </div>
             </div>

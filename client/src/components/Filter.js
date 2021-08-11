@@ -1,8 +1,8 @@
 import React, {useState } from 'react'
 import  '../styles/button.css';
 const Filter = (props) => {
-  const [ priceLow, setPriceLow ] = useState("min")
-  const [ priceHigh, setPriceHigh ] = useState("max")
+  const [ priceLow, setPriceLow ] = useState("")
+  const [ priceHigh, setPriceHigh ] = useState("")
   const [ city, setCity ] = useState("")
   const [ state, setState ] = useState("")
 
@@ -134,7 +134,7 @@ const Filter = (props) => {
           
           <div className="filters price">
             <span style={{color: "black", "textAlign": "left"}} className="title">Price</span>
-            <input type="text" name="min_price" className="min-price" onChange={(e) => {
+            <input type="text" name="min_price" placeholder="min" className="min-price" onChange={(e) => {
               if (priceLow === "min") {
                 
                 setPriceLow(e.target.value.substring(1))
@@ -145,7 +145,7 @@ const Filter = (props) => {
               
               // props.updatePriceLow(parseInt(e.target.value))
             }} value={priceLow} />
-            <input type="text" name="max_price" className="max-price" onChange={(e) => {
+            <input type="text" name="max_price" placeholder="max" className="max-price" onChange={(e) => {
               if (priceHigh === "max") {
                 
                 setPriceHigh(e.target.value.substring(1))

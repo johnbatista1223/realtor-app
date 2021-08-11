@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
 import Filter from '../components/Filter'
-import Listings from '../components/Listings'
+// import Listings from '../components/Listings'
 import '../styles/grid.css';
 import '../styles/listings.css';
 import '../styles/content-area.css';
@@ -8,7 +8,9 @@ import '../styles/home.css'
 import { UserContext } from '../context/UserProvider'
 import axios from 'axios'
 //import listingsData from '../Data/ListingsData'
-import { FaHeart } from "react-icons/fa"
+import { FaHeart } from "react-icons/fa";
+import { FaMapMarkedAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const { loggedIn } = useContext(UserContext)
@@ -89,8 +91,8 @@ Home.defaultProps = {
   listings: []
 }
 const ListingEntry = (props) => {
-  const saveFavorite = () => {
-    console.log("saveFavorite")
+  const saveFavorite = (listingid) => {
+    console.log(listingid)
   }
   console.log(props.listing)
   return (
@@ -105,19 +107,24 @@ const ListingEntry = (props) => {
 
         <div className="fa-icons">
           <div className="contact-icon">
-            <div className="contact-icons fa-heart" onClick={saveFavorite}><FaHeart size={30} /></div>
+            <div className="contact-icons fa-heart" onClick={saveFavorite(props.listing.id)}><FaHeart size={30} /></div>
           </div>
         </div>
         <div className="price">
-          ${props.listing.list_price}
+        <em>{props.listing.list_price}</em>
         </div>
-        <div className="location">
-          {props.listing.location.address.city}, {props.listing.location.address.state_code}
+        <div className="address fas fa-map">
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFrEl2FBtQieNOY3GNxd_NFFFYI-9ViXs&callback=initMap"></script>
+        {props.listing.location.address.line}
+        </div>    
+        <div className="location" id="map">
+        {/* <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script> */}
+        {props.listing.location.address.city}, {props.listing.location.address.state_code}
         </div>
-
       </div>
     </div>
   )
 }
+
 
 export default Home;
