@@ -25,16 +25,16 @@ const QuanContact = () => {
           <div className="fa-icons">
             <div className="contact-icon">
 
-              <a className="contact-icons" href="https://https://github.com/Quando24"><FaGithub size={30} /></a>
+              <a className="contact-icons" href="https://https://github.com/Quando24"><FaGithub size={35} /></a>
             </div>
             <div className="contact-icon">
-              <a className="contact-icons" href="https://www.linkedin.com/in/raquan-stanley/"><FaLinkedin size={30} /></a>
+              <a className="contact-icons" href="https://www.linkedin.com/in/raquan-stanley/"><FaLinkedin size={35} /></a>
             </div>
             <div className="contact-icon">
               <a className="contact-icons" href="+1"><FaPhone size={35} /></a>
             </div>
             <div className="contact-icon">
-              <a className="contact-icons" href="mailto:stanley.raquan@gmail.com"><FaEnvelope size={30} /></a>
+              <a className="contact-icons" href="mailto:stanley.raquan@gmail.com"><FaEnvelope size={35} /></a>
 
             </div>
           </div>
