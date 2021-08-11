@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import styled, { css } from 'styled-components/macro';
 import { FaHome } from 'react-icons/fa';
 import { UserContext } from '../context/UserProvider';
-
+import '../styles/navmenu.css';
 
 
 const Nav = styled.nav`
@@ -40,6 +40,8 @@ font-size: 25px;
 }`
 
 const NavLink = css`
+&:hover {background-color:lime; color:navy};
+border-radius:10px;
  color:#FFFFFF;
  display:flex;
  align-items:center;
@@ -52,9 +54,24 @@ const NavLink = css`
 
 `
 const Logo = styled(Link)`
+&:hover {background-color:lime; color:navy};
+@keyframes TransitioningBackground {
+  0% {
+    background-position: 1% 0%;
+  }
+  50% {
+    background-position: 99% 100%;
+  }
+  100% {
+    background-position: 1% 0%;
+  }
+}
 
 ${NavLink}
 `
+
+
+
 const MenuBars = styled.i``;
 
 const NavMenu = styled.div`
@@ -69,7 +86,7 @@ font-size-30px;
 color:white`;
 
 const NavMenuLinks = styled(Link)`
-${NavLink} 
+${NavLink}
 font-size:30px;
 margin-right:15px`;
 

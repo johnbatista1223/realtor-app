@@ -67,6 +67,7 @@ p {
 
 ::placeholder {
     color: lightgray;
+
 }
 
 @media screen and (min-width: 992px) {
