@@ -22,16 +22,16 @@ const AmyContact = () => {
                 excited to refine my skills with the right company and look forward to growing in this field.</p>
           <div className="fa-icons">
             <div className="contact-icon">
-              <a className="contact-icons" href="https://github.com/"><FaGithub size={30} /></a>
+              <a className="contact-icons" href="https://github.com/"><FaGithub size={35} /></a>
             </div>
             <div className="contact-icon">
-              <a className="contact-icons" href="https://linkedin.com/in/"><FaLinkedin size={30} /></a>
+              <a className="contact-icons" href="https://linkedin.com/in/"><FaLinkedin size={35} /></a>
             </div>
             <div className="contact-icon">
-              <a className="contact-icons" href="+1"><FaPhone size={25} /></a>
+              <a className="contact-icons" href="+1"><FaPhone size={35} /></a>
             </div>
             <div className="contact-icon">
-              <a className="contact-icons" href="mailto:"><FaEnvelope size={30} /></a>
+              <a className="contact-icons" href="mailto:"><FaEnvelope size={35} /></a>
             </div>
           </div>
         </div>

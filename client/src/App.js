@@ -17,6 +17,7 @@ import Rental from './components/Rental';
 import Userprofile from './components/Userprofile';
 import { UserContext } from './context/UserProvider';
 import "./App.css";
+import { Link } from "react-router-dom"
 
 
 
@@ -26,7 +27,7 @@ function App() {
   
   // Construct our main GraphQL API endpoint
   const httpLink = createHttpLink({
-    uri: 'http://localhost:4001/graphql',
+    uri: '/graphql',
   });
 
   // Construct request middleware that will attach the JWT token to every request as an `authorization` header
