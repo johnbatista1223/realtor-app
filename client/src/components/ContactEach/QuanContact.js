@@ -21,7 +21,7 @@ const QuanContact = () => {
           <p>
             <span class="first-letter">Y</span>Hey, my name is Raquan Stanley, and currently, I am a student representing the University of Pennsylvania's Full Stack Coding Bootcamp!
         </p>
-          <p>Currently located in Allentown,PA ,you can find Raquan often playing basketball. She is driven by an insatiable curiousity that requires a constant stream of learning. When not working she is honing her skills, working out, cooking new dishes, and exploring both in the city and out.</p>
+          <p>Currently located in Allentown,PA ,you can find Raquan living with her faithful blue nose pittie. She is driven by an insatiable curiousity that requires a constant stream of learning. When not working she is honing her skills, working out, cooking new dishes, and exploring both in the city and out.</p>
           <div className="fa-icons">
             <div className="contact-icon">
               <a className="contact-icons" href="https://https://github.com/Quando24"><FaGithub size={30} /></a>
