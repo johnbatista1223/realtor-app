@@ -24,16 +24,18 @@ const QuanContact = () => {
           <p>Currently located in Allentown,PA ,you can find Raquan living with her faithful blue nose pittie. She is driven by an insatiable curiousity that requires a constant stream of learning. When not working she is honing her skills, working out, cooking new dishes, and exploring both in the city and out.</p>
           <div className="fa-icons">
             <div className="contact-icon">
-              <a className="contact-icons" href="https://https://github.com/Quando24"><FaGithub size={30} /></a>
+
+              <a className="contact-icons" href="https://https://github.com/Quando24"><FaGithub size={35} /></a>
             </div>
             <div className="contact-icon">
-              <a className="contact-icons" href="https://www.linkedin.com/in/raquan-stanley/"><FaLinkedin size={30} /></a>
+              <a className="contact-icons" href="https://www.linkedin.com/in/raquan-stanley/"><FaLinkedin size={35} /></a>
             </div>
             <div className="contact-icon">
               <a className="contact-icons" href="+1"><FaPhone size={25} /></a>
             </div>
             <div className="contact-icon">
-              <a className="contact-icons" href="mailto:stanley.raquan@gmail.com"><FaEnvelope size={30} /></a>
+              <a className="contact-icons" href="mailto:stanley.raquan@gmail.com"><FaEnvelope size={35} /></a>
+
             </div>
           </div>
         </div>
