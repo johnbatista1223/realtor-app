@@ -3,7 +3,8 @@ import './hero.css';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../../utils/mutations';
 import { useHistory } from 'react-router-dom'
-import Auth from '../../utils/auth'
+import Auth from '../../utils/auth';
+
 
 function Hero() {
 
@@ -46,6 +47,7 @@ function Hero() {
           </div>
           <a href="" id="recover">Forgot your password?</a>
           <div id="login-button">
+            <a href ="./Homes">
               <button id="submit" type="submit" onClick={async (e) => {
                 e.preventDefault()
                 try {
@@ -60,7 +62,7 @@ function Hero() {
                   setErrorMessage("You entered an incorrect username or password")
                 }
                 
-              }}>Submit</button>
+              }}>Submit</button></a>
               {isError && <div style={{backgroundColor: "red", color: "black", padding: "10px", marginTop: "10px", display: "flex", "justifyContent": "center", "alignItems": "center"}}>{errorMessage}</div>}
           </div>
           <div id="register">

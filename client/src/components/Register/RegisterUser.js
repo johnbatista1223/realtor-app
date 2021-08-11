@@ -3,9 +3,7 @@ import './register.css';
 import { useMutation } from '@apollo/client';
 import { CREATE_USER } from '../../utils/mutations';
 import { useHistory } from 'react-router-dom'
-import Auth from '../../utils/auth'
-
-
+import Auth from '../../utils/auth';
 
   
 const RegisterUser = (props) => {
@@ -27,32 +25,31 @@ const RegisterUser = (props) => {
                     <h1>Register with HomePage</h1>
                 </div>
                 <div class="info">
-                    <form class="inputs">
-                        <p>Username</p>
-                        <input id="username" type="text" placeholder=" Type your username here..." name='username'value={username} onChange={(e) => {
+                        <form class="inputs">
+                            <p>Username</p>
+                            <input id="username" type="text" placeholder=" Type your username here..." name='username' value={username} onChange={(e) => {
 
-                            setUsername(e.target.value)
-                            
-                        }}/>
-                        <p>Email</p>
-                        <input id="email" type="text" placeholder=" Type your email here..." name = 'email' value={email} onChange={(e) => {
-                            setEmail(e.target.value)
-                            
-                        }}/>
-                        <p>Password</p>
-                        <input id="password" type="password" placeholder=" Type your password here..." name = 'password' value={password} onChange={(e) => {
+                                setUsername(e.target.value)
 
-                            setPassword(e.target.value)
-                        }}/>
-                        <p>Confirm Password</p>
-                        <input id="confirm-password" type="password" placeholder=" Confirm your password here..." value={pwConfirm} onChange={(e) => {
+                            }} />
+                            <p>Email</p>
+                            <input id="email" type="text" placeholder=" Type your email here..." name='email' value={email} onChange={(e) => {
+                                setEmail(e.target.value)
 
-                            setPWConfirm(e.target.value)
+                            }} />
+                            <p>Password</p>
+                            <input id="password" type="password" placeholder=" Type your password here..." name='password' value={password} onChange={(e) => {
 
-                        }}/>
-                    </form>
+                                setPassword(e.target.value)
+                            }} />
+                            <p>Confirm Password</p>
+                            <input id="confirm-password" type="password" placeholder=" Confirm your password here..." value={pwConfirm} onChange={(e) => {
+
+                                setPWConfirm(e.target.value)
+
+                            }} />
+                        </form>
                     <div class="reg-button">
-                      
                             <button id="register-submit" type="submit" onClick={async (e) => {
 
                                 e.preventDefault()
@@ -90,7 +87,7 @@ const RegisterUser = (props) => {
 
                                 
 
-                                }}>Submit</button>
+                                }}> Submit</button>
                     </div>
                 </div>
             </div>
