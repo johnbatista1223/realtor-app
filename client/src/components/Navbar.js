@@ -41,7 +41,7 @@ font-size: 25px;
 }`
 
 const NavLink = css`
-&:hover {background-color:lime; color:navy};
+&:hover {background-color:white; color:navy};
 border-radius:10px;
  color:#FFFFFF;
  display:flex;
@@ -49,7 +49,7 @@ border-radius:10px;
  padding: 0 2rem;
  height:100%;
  cursor:pointer;
- transition: .5s all ease-in-out;
+ transition: .1s all ease-in-out;
  text-decoration:none;
  font-weight:bold;
 

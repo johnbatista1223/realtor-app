@@ -21,63 +21,63 @@ const Home = () => {
   const [city, setCity] = useState("")
   const [priceLow, setPriceLow] = useState(0)
   const [priceHigh, setPriceHigh] = useState(800000)
-  const [ errorMessage, setErrorMessage ] = useState("")
+  const [errorMessage, setErrorMessage] = useState("")
 
-  const [ carouselImages, setCarouselImages ] = useState([])
+  const [carouselImages, setCarouselImages] = useState([])
   const [data, setData] = useState([]); // Sort listings from price low to high
 
   useEffect(() => {
     //Get listings
-      if (!(stateCode.length === 0 || city.length === 0)) {
+    if (!(stateCode.length === 0 || city.length === 0)) {
 
-        var options = {
-          method: 'GET',
-          url: 'https://us-real-estate.p.rapidapi.com/for-sale',
-          params: { offset: '0', limit: '', price_min: priceLow, price_max: priceHigh, state_code: stateCode, city: city, sort: 'newest' },
-          headers: {
-            'x-rapidapi-key': '0a2e315049msh032e93ea820f37fp14695bjsn4bfb09912ad0',
-            'x-rapidapi-host': 'us-real-estate.p.rapidapi.com'
+      var options = {
+        method: 'GET',
+        url: 'https://us-real-estate.p.rapidapi.com/for-sale',
+        params: { offset: '0', limit: '', price_min: priceLow, price_max: priceHigh, state_code: stateCode, city: city, sort: 'newest' },
+        headers: {
+          'x-rapidapi-key': '0a2e315049msh032e93ea820f37fp14695bjsn4bfb09912ad0',
+          'x-rapidapi-host': 'us-real-estate.p.rapidapi.com'
+        }
+      };
+      axios.request(options).then(function (response) {
+
+        let tempListings = [...response.data.data.results]
+
+        tempListings.sort((a, b) => {
+          if (a.list_price < b.list_price) {
+            return -1
+          } else {
+            return 1
           }
-        };
-        axios.request(options).then(function (response) {
-          
-          let tempListings = [...response.data.data.results]
+        })
 
-          tempListings.sort((a, b) => {
-            if (a.list_price < b.list_price) {
-               return -1
-            } else {
-              return 1
-            }
-          })
+        setListings(tempListings)
+      }).catch(function (error) {
+        console.error(error);
+      });
 
-          setListings(tempListings)
-        }).catch(function (error) {
-          console.error(error);
-        });
+    }
 
-      }
-      
 
-    
-    
+
+
   }, [priceLow, priceHigh, city, stateCode])
-  
 
 
-    return (
-      <div className="for-sale">
 
-        {carouselImages.length > 0 && <Carousel images={carouselImages} closeCarousel={() => setCarouselImages([])} />}
-        <div className="filter-wrapper">
+  return (
+    <div className="for-sale">
+
+      {carouselImages.length > 0 && <Carousel images={carouselImages} closeCarousel={() => setCarouselImages([])} />}
+      <div className="filter-wrapper">
         <Filter updateFilters={(priceLow, priceHigh, city, state) => {
 
           setListings([])
-          
+
           if (city.length === 0 || state.length === 0) {
             setErrorMessage("You must enter a city and state")
           } else {
-      
+
             setErrorMessage("")
 
             setPriceLow(parseInt(priceLow))
@@ -96,14 +96,10 @@ const Home = () => {
               (images) => {
                 setCarouselImages(images)
               }
-            }/>
+            } />
           })}
         </div>
       </div>
-      <section>
-
-        {/* <Listings listingsData={this.state.filteredData} change={this.change} globalState={this.state} changeView={this.changeView} /> */}
-      </section>
     </div>
   );
 
@@ -116,10 +112,11 @@ const ListingEntry = (props) => {
   const saveFavorite = (listingid) => {
     console.log(listingid)
   }
-    let googlemaplink = `https://www.google.com/maps/place/${props.listing.location.address.line},+${props.listing.location.address.city},+${props.listing.location.address.state_code}+${props.listing.location.address.postal_code}`
+  let googlemaplink = `https://www.google.com/maps/place/${props.listing.location.address.line},+${props.listing.location.address.city},+${props.listing.location.address.state_code}+${props.listing.location.address.postal_code}`
   console.log(props.listing)
   return (
     <div className="listing-card">
+             <a href={googlemaplink} class="fa-map" target="_blank"><FaMapMarked size={30} /></a>
       <div className="image" onClick={() => {
 
         props.carouselImages(props.listing.photos)
@@ -135,27 +132,19 @@ const ListingEntry = (props) => {
         <div className="fa-icons">
           <div className="contact-icon">
             <div className="contact-icons fa-heart" onClick={saveFavorite(props.listing.id)}><FaHeart size={30} /></div>
-
-            
-            <a href={googlemaplink} target="_blank"><FaMapMarked size={30} /></a>
           </div>
         </div>
-        {/* <div className="status">
-        {
-        props.listing.flags.is_contingent === true ? <span> PENDING</span>
-        }
-        </div> */}
         <div className="price">
-        <em>{props.listing.list_price}</em>
+          <em>List Price: ${props.listing.list_price}</em>
         </div>
-        <div className="address fas fa-map">
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFrEl2FBtQieNOY3GNxd_NFFFYI-9ViXs&callback=initMap"></script>
-        {props.listing.location.address.line}
-        </div>    
+        <div className="address">
+          {/* <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFrEl2FBtQieNOY3GNxd_NFFFYI-9ViXs&callback=initMap"></script> */}
+          {props.listing.location.address.line}
+        </div>
         <div className="location">
-        {/* <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script> */}
-        {/* {props.listing.location.flags.is_contingent} */}
-        {props.listing.location.address.city}, {props.listing.location.address.state_code} {props.listing.location.address.postal_code}  
+          {/* <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script> */}
+          {/* {props.listing.location.flags.is_contingent} */}
+          {props.listing.location.address.city}, {props.listing.location.address.state_code} {props.listing.location.address.postal_code}
         </div>
         {props.listing.flags.is_contingent === null && <div className="flag-contingent">Contingent</div>}
         {props.listing.flags.is_pending === null && <div className="flag-pending">Pending</div>}
@@ -165,8 +154,8 @@ const ListingEntry = (props) => {
       props.flags ===  {props.is_contingent} ? Pending
       }
         </div> */}
-        </div>
       </div>
+    </div>
   )
 }
 
