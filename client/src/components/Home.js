@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import Filter from '../components/Filter'
 // import Listings from '../components/Listings'
 import '../styles/grid.css';
-import '../styles/listings.css';
+// import '../styles/listings.css';
 import '../styles/content-area.css';
 import '../styles/home.css'
 import { UserContext } from '../context/UserProvider'
@@ -19,47 +19,54 @@ const Home = () => {
   const [city, setCity] = useState("")
   const [priceLow, setPriceLow] = useState(0)
   const [priceHigh, setPriceHigh] = useState(800000)
-  const [ errorMessage, setErrorMessage ] = useState("")
+  const [errorMessage, setErrorMessage] = useState("")
 
   useEffect(() => {
     //Get listings
-      if (!(stateCode.length === 0 || city.length === 0)) {
+    if (!(stateCode.length === 0 || city.length === 0)) {
 
-        var options = {
-          method: 'GET',
-          url: 'https://us-real-estate.p.rapidapi.com/for-sale',
-          params: { offset: '0', limit: '', price_min: priceLow, price_max: priceHigh, state_code: stateCode, city: city, sort: 'newest' },
-          headers: {
-            'x-rapidapi-key': '0a2e315049msh032e93ea820f37fp14695bjsn4bfb09912ad0',
-            'x-rapidapi-host': 'us-real-estate.p.rapidapi.com'
-          }
-        };
-        axios.request(options).then(function (response) {
-          console.log(response.data.data.results)
-          setListings(response.data.data.results)
-        }).catch(function (error) {
-          console.error(error);
-        });
+      var options = {
+        method: 'GET',
+        url: 'https://us-real-estate.p.rapidapi.com/for-sale',
+        params: { offset: '0', limit: '', price_min: priceLow, price_max: priceHigh, state_code: stateCode, city: city, sort: 'newest' },
+        headers: {
+          // Amy
+          'x-rapidapi-key': '0a2e315049msh032e93ea820f37fp14695bjsn4bfb09912ad0',
+          'x-rapidapi-host': 'us-real-estate.p.rapidapi.com',
+          // // Ash
+          // 'x-rapidapi-key': '89db18ec3cmshe16b812730bf2ddp12b34ajsn585d626a6b35',
+          // 'x-rapidapi-host': 'us-real-estate.p.rapidapi.com'
 
-      }
-      
 
-    
-    
+
+        }
+      };
+      axios.request(options).then(function (response) {
+        console.log(response.data.data.results)
+        setListings(response.data.data.results)
+      }).catch(function (error) {
+        console.error(error);
+      });
+
+    }
+
+
+
+
   }, [priceLow, priceHigh, city, stateCode])
-  
 
-    return (
-      <div className="for-sale">
-        <div className="filter-wrapper">
+
+  return (
+    <div className="for-sale">
+      <div className="filter-wrapper">
         <Filter updateFilters={(priceLow, priceHigh, city, state) => {
 
           setListings([])
-          
+
           if (city.length === 0 || state.length === 0) {
             setErrorMessage("You must enter a city and state")
           } else {
-      
+
             setErrorMessage("")
 
             setPriceLow(parseInt(priceLow))
@@ -111,15 +118,15 @@ const ListingEntry = (props) => {
           </div>
         </div>
         <div className="price">
-        <em>{props.listing.list_price}</em>
+          <em>{props.listing.list_price}</em>
         </div>
         <div className="address fas fa-map">
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFrEl2FBtQieNOY3GNxd_NFFFYI-9ViXs&callback=initMap"></script>
-        {props.listing.location.address.line}
-        </div>    
+          <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFrEl2FBtQieNOY3GNxd_NFFFYI-9ViXs&callback=initMap"></script>
+          {props.listing.location.address.line}
+        </div>
         <div className="location" id="map">
-        {/* <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script> */}
-        {props.listing.location.address.city}, {props.listing.location.address.state_code}
+          {/* <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script> */}
+          {props.listing.location.address.city}, {props.listing.location.address.state_code}
         </div>
       </div>
     </div>

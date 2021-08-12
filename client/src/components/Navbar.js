@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import styled, { css } from 'styled-components/macro';
 import { FaHome } from 'react-icons/fa';
 import { UserContext } from '../context/UserProvider';
-import '../styles/navmenu.css';
+// import '../styles/navmenu.css';
 
 
 const Nav = styled.nav`
@@ -92,7 +92,7 @@ margin-right:15px`;
 
 const Navbar = () => {
 
-  const {  loggedIn } = useContext(UserContext)
+  const { loggedIn } = useContext(UserContext)
   return (
     <Nav>
       <Logo to="/"><FaHome size={75} /> </Logo>
