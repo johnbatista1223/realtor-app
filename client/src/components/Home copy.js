@@ -11,8 +11,7 @@ import axios from 'axios'
 import { FaHeart } from "react-icons/fa";
 // import { FaMapMarkedAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Carousel from './Caousel/carousel';
-import { FaMapMarked } from "react-icons/fa";
+// import Carousel from './Caousel/carousel';
 
 const Home = () => {
   const { token } = useContext(UserContext)
@@ -24,7 +23,7 @@ const Home = () => {
   const [ errorMessage, setErrorMessage ] = useState("")
 
   const [ carouselImages, setCarouselImages ] = useState([])
-  const [data, setData] = useState([]); // Sort listings from price low to high
+  // const [data, setData] = useState([]); */ Sort listings from price low to high
 
   useEffect(() => {
     //Get listings
@@ -68,7 +67,7 @@ const Home = () => {
     return (
       <div className="for-sale">
 
-        {carouselImages.length > 0 && <Carousel images={carouselImages} closeCarousel={() => setCarouselImages([])} />}
+        {/* {carouselImages.length > 0 && <Carousel images={carouselImages} />} */}
         <div className="filter-wrapper">
         <Filter updateFilters={(priceLow, priceHigh, city, state) => {
 
@@ -116,15 +115,14 @@ const ListingEntry = (props) => {
   const saveFavorite = (listingid) => {
     console.log(listingid)
   }
-    let googlemaplink = `https://www.google.com/maps/place/${props.listing.location.address.line},+${props.listing.location.address.city},+${props.listing.location.address.state_code}+${props.listing.location.address.postal_code}`
   console.log(props.listing)
   return (
-    <div className="listing-card">
-      <div className="image" onClick={() => {
+    <div className="listing-card" onClick={() => {
 
-        props.carouselImages(props.listing.photos)
+      props.carouselImages(props.listing.photos)
 
-      }}>
+    }}>
+      <div className="image">
         {
           props.listing.primary_photo !== null ? <img src={props.listing.primary_photo.href} /> : <span> NO PHOTO AVAILABLE</span>
         }
@@ -135,9 +133,6 @@ const ListingEntry = (props) => {
         <div className="fa-icons">
           <div className="contact-icon">
             <div className="contact-icons fa-heart" onClick={saveFavorite(props.listing.id)}><FaHeart size={30} /></div>
-
-            
-            <a href={googlemaplink} target="_blank"><FaMapMarked size={30} /></a>
           </div>
         </div>
         {/* <div className="status">
