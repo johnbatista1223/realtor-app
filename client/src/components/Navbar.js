@@ -1,17 +1,18 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { menuData } from '../Data/MenuData';
 import { Link } from 'react-router-dom';
 import styled, { css } from 'styled-components/macro';
 import { FaHome } from 'react-icons/fa';
 import { UserContext } from '../context/UserProvider';
-import '../styles/navmenu.css';
+
+
 
 
 const Nav = styled.nav`
 font-family: 'Josefin Sans', sans-serif;
 color:#FFFFFF;
 margin-left:-10px;
-height:100px;
+height:120px;
 display:flex;
 justify-content: space-between;
 padding: 1rem 2rem;
@@ -87,12 +88,15 @@ color:white`;
 
 const NavMenuLinks = styled(Link)`
 ${NavLink}
-font-size:30px;
+font-size:40px;
 margin-right:15px`;
 
 const Navbar = () => {
 
-  const {  loggedIn } = useContext(UserContext)
+  const {  token } = useContext(UserContext)
+
+  
+
   return (
     <Nav>
       <Logo to="/"><FaHome size={75} /> </Logo>
@@ -102,9 +106,9 @@ const Navbar = () => {
       </svg>me</h1>
 
       <MenuBars />
-      {loggedIn && <NavMenu>
-        {menuData.map((item) => (
-          <NavMenuLinks to={item.link} key={item.id}>
+      {token !== undefined && <NavMenu>
+        {menuData.map((item, index) => (
+          <NavMenuLinks to={item.link} key={index}>
             {item.title}
           </NavMenuLinks>
         ))}
