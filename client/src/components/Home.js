@@ -37,6 +37,8 @@ const Home = () => {
         headers: {
           'x-rapidapi-key': 'b8cff983eemsh2ff101990d69507p1a41e2jsn1c950c5975d',
           'x-rapidapi-host': 'us-real-estate.p.rapidapi.com'
+
+          // b8cff983eemsh2ff101990d69507p1a41e2jsn1c950c5975d Amy's other API key
         }
       };
       axios.request(options).then(function (response) {
