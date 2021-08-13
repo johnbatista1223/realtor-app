@@ -41,7 +41,7 @@ font-size: 25px;
 }`
 
 const NavLink = css`
-&:hover {background-color:white; color:navy};
+&:hover {background-color:white; color:rgba(23, 45, 79, 1)};
 border-radius:10px;
  color:#FFFFFF;
  display:flex;
@@ -55,7 +55,7 @@ border-radius:10px;
 
 `
 const Logo = styled(Link)`
-&:hover {background-color:lime; color:navy};
+// &:hover {background-color:white; color:white};
 @keyframes TransitioningBackground {
   0% {
     background-position: 1% 0%;
