@@ -6,7 +6,6 @@ import { useHistory } from 'react-router-dom'
 import Auth from '../../utils/auth';
 import { UserContext } from '../../context/UserProvider';
 
-
 function Hero() {
 
   const [login, { error, data }] = useMutation(LOGIN_USER);
@@ -21,38 +20,38 @@ function Hero() {
 
   return (
     <div className="hero-container-outer">
-      <div class="hero-container">
+       <div class="hero-container">
         <div class="login">
           <div class="title">
             <h1>Login to HomePage</h1>
           </div>
           <div class="signin">
             <form>
-            <div class="inputs">
-              <p>Username</p>
-              <input
-                id="username"
-                className="input-size"
-                type="text"
-                placeholder=" Type your username here..."
-                value={username}
-                onChange={(e) => {
+              <div class="inputs">
+                <p>Username</p>
+                <input
+                  id="username"
+                  className="input-size"
+                  type="text"
+                  placeholder=" Type your username here..."
+                  value={username}
+                  onChange={(e) => {
 
-                  setUsername(e.target.value)
+                    setUsername(e.target.value)
 
-                }} />
-              <p>Password</p>
-              <input
-                id="password"
-                type="password" 
-                placeholder=" Type your password here..."
-                onChange={(e) => { setPassword(e.target.value) }}
-                value={password}
-              />
-            </div>
-            <a href="" id="recover">Forgot your password?</a>
-            <div id="login-button">
-              
+                  }} />
+                <p>Password</p>
+                <input
+                  id="password"
+                  type="password"
+                  placeholder=" Type your password here..."
+                  onChange={(e) => { setPassword(e.target.value) }}
+                  value={password}
+                />
+              </div>
+              <a href="" id="recover">Forgot your password?</a>
+              <div id="login-button">
+
                 <button id="submit" type="submit" onClick={async (e) => {
                   e.preventDefault()
                   try {
@@ -69,9 +68,9 @@ function Hero() {
                   }
 
                 }}>Submit</button>
-                
-              {isError && <div style={{ backgroundColor: "red", color: "black", padding: "10px", marginTop: "10px", display: "flex", "justifyContent": "center", "alignItems": "center" }}>{errorMessage}</div>}
-            </div>
+
+                {isError && <div style={{ backgroundColor: "red", color: "black", padding: "10px", marginTop: "10px", display: "flex", "justifyContent": "center", "alignItems": "center" }}>{errorMessage}</div>}
+              </div>
             </form>
             <div id="register">
               <h3>Or create an account</h3>
