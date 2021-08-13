@@ -9,17 +9,22 @@ import { UserContext } from '../context/UserProvider'
 import axios from 'axios'
 //import listingsData from '../Data/ListingsData'
 import { FaHeart } from "react-icons/fa";
-import { FaMapMarkedAlt } from "react-icons/fa";
+// import { FaMapMarkedAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Carousel from './Caousel/carousel';
+import { FaMapMarked } from "react-icons/fa";
 
 const Home = () => {
-  const { loggedIn } = useContext(UserContext)
+  const { token } = useContext(UserContext)
   const [listings, setListings] = useState([])
   const [stateCode, setStateCode] = useState("")
   const [city, setCity] = useState("")
   const [priceLow, setPriceLow] = useState(0)
   const [priceHigh, setPriceHigh] = useState(800000)
   const [errorMessage, setErrorMessage] = useState("")
+
+  const [carouselImages, setCarouselImages] = useState([])
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     //Get listings
@@ -30,20 +35,23 @@ const Home = () => {
         url: 'https://us-real-estate.p.rapidapi.com/for-sale',
         params: { offset: '0', limit: '', price_min: priceLow, price_max: priceHigh, state_code: stateCode, city: city, sort: 'newest' },
         headers: {
-          // Amy
           'x-rapidapi-key': '0a2e315049msh032e93ea820f37fp14695bjsn4bfb09912ad0',
-          'x-rapidapi-host': 'us-real-estate.p.rapidapi.com',
-          // // Ash
-          // 'x-rapidapi-key': '89db18ec3cmshe16b812730bf2ddp12b34ajsn585d626a6b35',
-          // 'x-rapidapi-host': 'us-real-estate.p.rapidapi.com'
-
-
-
+          'x-rapidapi-host': 'us-real-estate.p.rapidapi.com'
         }
       };
       axios.request(options).then(function (response) {
-        console.log(response.data.data.results)
-        setListings(response.data.data.results)
+
+        let tempListings = [...response.data.data.results]
+
+        tempListings.sort((a, b) => {
+          if (a.list_price < b.list_price) {
+            return -1
+          } else {
+            return 1
+          }
+        })
+
+        setListings(tempListings)
       }).catch(function (error) {
         console.error(error);
       });
@@ -56,8 +64,11 @@ const Home = () => {
   }, [priceLow, priceHigh, city, stateCode])
 
 
+
   return (
     <div className="for-sale">
+
+      {carouselImages.length > 0 && <Carousel images={carouselImages} closeCarousel={() => setCarouselImages([])} />}
       <div className="filter-wrapper">
         <Filter updateFilters={(priceLow, priceHigh, city, state) => {
 
@@ -81,14 +92,14 @@ const Home = () => {
         {errorMessage.length > 0 && <div className="error-message">You must enter a city and select a state</div>}
         <div className="listing-results-wrapper">
           {listings.map((listing, index) => {
-            return <ListingEntry key={index} listing={listing} />
+            return <ListingEntry key={index} listing={listing} carouselImages={
+              (images) => {
+                setCarouselImages(images)
+              }
+            } />
           })}
         </div>
       </div>
-      <section>
-
-        {/* <Listings listingsData={this.state.filteredData} change={this.change} globalState={this.state} changeView={this.changeView} /> */}
-      </section>
     </div>
   );
 
@@ -101,10 +112,16 @@ const ListingEntry = (props) => {
   const saveFavorite = (listingid) => {
     console.log(listingid)
   }
+  let googlemaplink = `https://www.google.com/maps/place/${props.listing.location.address.line},+${props.listing.location.address.city},+${props.listing.location.address.state_code}+${props.listing.location.address.postal_code}`
   console.log(props.listing)
   return (
     <div className="listing-card">
-      <div className="image">
+      <a href={googlemaplink} class="fa-map" target="_blank"><FaMapMarked size={30} /></a>
+      <div className="image" onClick={() => {
+
+        props.carouselImages(props.listing.photos)
+
+      }}>
         {
           props.listing.primary_photo !== null ? <img src={props.listing.primary_photo.href} /> : <span> NO PHOTO AVAILABLE</span>
         }
@@ -118,16 +135,25 @@ const ListingEntry = (props) => {
           </div>
         </div>
         <div className="price">
-          <em>{props.listing.list_price}</em>
+          <em>List Price: ${props.listing.list_price}</em>
         </div>
-        <div className="address fas fa-map">
-          <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFrEl2FBtQieNOY3GNxd_NFFFYI-9ViXs&callback=initMap"></script>
+        <div className="address">
+          {/* <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFrEl2FBtQieNOY3GNxd_NFFFYI-9ViXs&callback=initMap"></script> */}
           {props.listing.location.address.line}
         </div>
-        <div className="location" id="map">
+        <div className="location">
           {/* <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script> */}
-          {props.listing.location.address.city}, {props.listing.location.address.state_code}
+          {/* {props.listing.location.flags.is_contingent} */}
+          {props.listing.location.address.city}, {props.listing.location.address.state_code} {props.listing.location.address.postal_code}
         </div>
+        {props.listing.flags.is_contingent === null && <div className="flag-contingent">Contingent</div>}
+        {props.listing.flags.is_pending === null && <div className="flag-pending">Pending</div>}
+        {/* <div className="status">
+        
+      {
+      props.flags ===  {props.is_contingent} ? Pending
+      }
+        </div> */}
       </div>
     </div>
   )
