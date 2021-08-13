@@ -26,3 +26,17 @@ mutation createUser($username: String!, $email: String!, $password: String!) {
   }
 }
 `;
+export const ADD_PROFILE = gql`
+  mutation addProfile($ProfileText: String!) {
+    addProfile(ProfileText: $ProfileText) {
+      _id
+      
+      
+      
+      comments {
+        _id
+        commentText
+      }
+    }
+  }
+`;

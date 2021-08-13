@@ -3,6 +3,8 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero/Hero';
 import Footer from './components/Footer';
 import RegisterUser from './components/Register/RegisterUser.js';
+// import Carousel from './components/Carousel/Carousel';
+
 import {
   ApolloClient,
   InMemoryCache,
@@ -18,12 +20,12 @@ import Userprofile from './components/Userprofile';
 import { UserContext } from './context/UserProvider';
 import "./App.css";
 import { Link } from "react-router-dom"
-
+import Logout from './components/Logout.js'
 
 
 function App() {
 
-  const { loggedIn } = useContext(UserContext)
+  const { token } = useContext(UserContext)
   
   // Construct our main GraphQL API endpoint
   const httpLink = createHttpLink({
@@ -52,31 +54,23 @@ function App() {
   return (
     <ApolloProvider client={client}>
     <div className="App">
-      <Navbar authenticated={true} />
+      <Navbar />
 
       <div className="content-wrapper">
 
 
 
         <Switch>
-          <Route exact path="/homes">
-            <Home />
-          </Route>
-          <Route exact path="/rentals">
-            <Rental />
-          </Route>
-          <Route exact path="Profile">
-            <Userprofile />
-          </Route>
-          <Route exact path="/register">
-            <RegisterUser />
-          </Route>
+          <Route exact path="/homes"  component={() => token !== undefined ? <Home /> : <Hero />}/>
+          <Route exact path="Profile" component={() => token !== undefined ? <Userprofile /> : <Hero />}/>
+          <Route exact path="/register" component={() => token !== undefined ? <Home /> : <RegisterUser />}/>
           <Route exact path="/contact">
             <Contact />
           </Route>
-          <Route exact path="/">
-            <Hero />
+          <Route exact path="/logout">
+          <Logout />
           </Route>
+          <Route exact path="/" component={() => token !== undefined ? <Home /> : <Hero />}/>
         </Switch>
 
       </div>
