@@ -192,20 +192,22 @@
 
 }
 
-.fa-icons .fa-heart{
-  color:  red;
-  filter: drop-shadow(5px 2.5px 1px pink);
-  justify-content: right;
+.fa-heart {
+  color:  red;  
+  display: flex;
+  filter: drop-shadow(5px 2.5px 1px rgb(236, 60, 89));
+  /* justify-content: right; */
 }
 
 .fa-map {
   color: green;
-
+  display: flex;
+  flex-direction: end;
 }
 
 #listings .listings-results .listing-img .details .user-img-box {
   width: 35px;
-  height: 35px;
+  height: 45px;
   border-radius: 50%;
   border: 2px solid #fff;
   display: inline-block;

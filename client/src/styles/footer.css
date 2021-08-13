@@ -109,7 +109,7 @@ color: white;
 }
 
 svg:hover path {
-  fill: lime;
+  fill: rgba(23, 45, 79, 1);
 }
 
 

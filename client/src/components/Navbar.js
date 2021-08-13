@@ -41,7 +41,7 @@ font-size: 25px;
 }`
 
 const NavLink = css`
-&:hover {background-color:white; color:navy};
+&:hover {background-color:white; color:rgba(23, 45, 79, 1)};
 border-radius:10px;
  color:#FFFFFF;
  display:flex;
@@ -55,7 +55,7 @@ border-radius:10px;
 
 `
 const Logo = styled(Link)`
-&:hover {background-color:lime; color:navy};
+// &:hover {background-color:white; color:white};
 @keyframes TransitioningBackground {
   0% {
     background-position: 1% 0%;
@@ -100,7 +100,7 @@ const Navbar = () => {
   return (
     <Nav>
       <Logo to="/"><FaHome size={75} /> </Logo>
-      <h1>There's No Place Like H<svg class="heart" viewBox="0 0 32 29.6">
+      <h1>There's No Place Like H<svg className="heart" viewBox="0 0 32 29.6">
         <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
   c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
       </svg>me</h1>

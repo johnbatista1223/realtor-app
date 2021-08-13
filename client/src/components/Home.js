@@ -35,8 +35,10 @@ const Home = () => {
         url: 'https://us-real-estate.p.rapidapi.com/for-sale',
         params: { offset: '0', limit: '', price_min: priceLow, price_max: priceHigh, state_code: stateCode, city: city, sort: 'newest' },
         headers: {
-          'x-rapidapi-key': '0a2e315049msh032e93ea820f37fp14695bjsn4bfb09912ad0',
+          'x-rapidapi-key': 'b8cff983eemsh2ff101990d69507p1a41e2jsn1c950c5975d1',
           'x-rapidapi-host': 'us-real-estate.p.rapidapi.com'
+
+          // b8cff983eemsh2ff101990d69507p1a41e2jsn1c950c5975d Amy's other API key
         }
       };
       axios.request(options).then(function (response) {
@@ -134,9 +136,10 @@ const ListingEntry = (props) => {
             <div className="contact-icons fa-heart" onClick={saveFavorite(props.listing.id)}><FaHeart size={30} /></div>
           </div>
         </div>
-        <div className="price">
+       <div className="price">
+          
           <em>List Price: ${props.listing.list_price}</em>
-        </div>
+          </div>
         <div className="address">
           {/* <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFrEl2FBtQieNOY3GNxd_NFFFYI-9ViXs&callback=initMap"></script> */}
           {props.listing.location.address.line}
