@@ -35,7 +35,7 @@ const Home = () => {
         url: 'https://us-real-estate.p.rapidapi.com/for-sale',
         params: { offset: '0', limit: '', price_min: priceLow, price_max: priceHigh, state_code: stateCode, city: city, sort: 'newest' },
         headers: {
-          'x-rapidapi-key': '0a2e315049msh032e93ea820f37fp14695bjsn4bfb09912ad0',
+          'x-rapidapi-key': 'b8cff983eemsh2ff101990d69507p1a41e2jsn1c950c5975d',
           'x-rapidapi-host': 'us-real-estate.p.rapidapi.com'
         }
       };

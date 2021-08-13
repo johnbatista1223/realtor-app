@@ -1,4 +1,3 @@
-import { Carousel } from "bootstrap"
 
 export const menuData =[
   {title:"Homes", link:"/homes"},
