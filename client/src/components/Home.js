@@ -136,10 +136,10 @@ const ListingEntry = (props) => {
             <div className="contact-icons fa-heart" onClick={saveFavorite(props.listing.id)}><FaHeart size={30} /></div>
           </div>
         </div>
-       <div className="price">
-          
+        <div className="price">
+
           <em>List Price: ${props.listing.list_price}</em>
-          </div>
+        </div>
         <div className="address">
           {/* <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFrEl2FBtQieNOY3GNxd_NFFFYI-9ViXs&callback=initMap"></script> */}
           {props.listing.location.address.line}
