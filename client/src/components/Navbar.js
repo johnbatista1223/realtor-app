@@ -11,7 +11,7 @@ import { UserContext } from '../context/UserProvider';
 const Nav = styled.nav`
 font-family: 'Josefin Sans', sans-serif;
 color:#FFFFFF;
-margin-left:-10px;
+margin-right:-50px;
 height:120px;
 display:flex;
 justify-content: space-between;
@@ -56,6 +56,8 @@ border-radius:10px;
 `
 const Logo = styled(Link)`
 &:hover {color:#e68a00};
+margin-left:-30px;
+margin-right: -110px;
 @keyframes TransitioningBackground {
   0% {
     background-position: 1% 0%;
