@@ -93,9 +93,9 @@ margin-right:15px`;
 
 const Navbar = () => {
 
-  const {  token } = useContext(UserContext)
+  const { token } = useContext(UserContext)
 
-  
+
 
   return (
     <Nav>
