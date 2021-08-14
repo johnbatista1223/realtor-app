@@ -30,11 +30,11 @@ function Footer() {
                 <div class="col">
                     <h1>Accounts</h1>
                     <ul>
-                    <li><a href="/Rentals">About</a></li>
-                    <li><a href="/Rentals">Mission</a></li>
-                    <li><a href="/Rentals">Services</a></li>
-                    <li><a href="/Rentals">Social</a></li>
-                    <li><a href="/Rentals">Contact</a></li>
+                    <li><a href="/Homes">About</a></li>
+                    <li><a href="/Homes">Mission</a></li>
+                    <li><a href="/Homes">Services</a></li>
+                    <li><a href="/Homes">Social</a></li>
+                    <li><a href="/Homes">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col social">

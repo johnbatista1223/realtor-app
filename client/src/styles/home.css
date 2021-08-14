@@ -26,7 +26,7 @@
 .for-sale .listings-wrapper .search-area input {
     width: 70%;
     background: transparent;
-    font-size: 2rem;
+    font-size: 3rem;
     border: none;
     border-bottom: 1px solid #828d9d;
     margin-bottom: 20px;
@@ -34,6 +34,19 @@
     color: #c8c8c8;
 }
 
+.details {
+    color: charcoal;
+}
+
+.flag-contingent {
+    color: Orange;
+    font-weight: bold;
+}
+
+.flag-pending {
+    color: red;
+    font-style: italic; 
+}
 
 .for-sale .listings-wrapper .listing-results-wrapper {
     flex: 1 1 auto;
@@ -43,16 +56,19 @@
     justify-items: center;
     align-items: center;
     gap: 35px;
-    font-weight: bold;
+     font-family: 'Lato', sans-serif;
+
 }
+
 
 .for-sale .listings-wrapper .listing-results-wrapper .listing-card {    
     width: 300px;
-    height: 425px;
+    height: 455px;
     padding: 10px;
     display: flex;
     flex-direction: column;
     box-shadow: 0 0 20px #000;
+    background-color: rgb(71, 102, 133);
 }
 
 .for-sale .listings-wrapper .listing-results-wrapper .listing-card .image {
@@ -63,6 +79,7 @@
     justify-content: center;
     align-items: center;
     background-color: grey;
+    box-shadow: 0 0 20px rgb(102, 179, 255);
 }
 
 .for-sale .listings-wrapper .listing-results-wrapper .listing-card .image img {
@@ -80,8 +97,13 @@
 .details{
     height: 5px;
     position: relative;
-    bottom: 30px;
+    bottom: 5px;
 }
+
+/* .hr {
+    margin: 20px 0;
+    border: 1px solid #f00;
+} */
 
 #map {
     height: 100%;

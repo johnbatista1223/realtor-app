@@ -114,7 +114,11 @@ p {
 }
 
 svg:hover path {
+<<<<<<< HEAD
   fill: rgb(72, 151, 188);
+=======
+  fill: rgba(23, 45, 79, 1);
+>>>>>>> 51bbf95eb0f43446d87038784c72d7557a2367e4
 }
 
 .clearfix {
