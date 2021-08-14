@@ -68,7 +68,7 @@ const Home = () => {
 
 
   return (
-    <div className="for-sale">
+    <div className="for-sale card-background">
 
       {carouselImages.length > 0 && <Carousel images={carouselImages} closeCarousel={() => setCarouselImages([])} />}
       <div className="filter-wrapper">
