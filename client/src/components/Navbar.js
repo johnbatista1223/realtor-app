@@ -17,7 +17,7 @@ display:flex;
 justify-content: space-between;
 padding: 1rem 2rem;
 z-index:100;
-background-color:rgba(23, 45, 79, 1);
+background-color:black;
 width:100%;
 font-size: 25px;
 .heart {
@@ -41,9 +41,9 @@ font-size: 25px;
 }`
 
 const NavLink = css`
-&:hover {background-color:white; color:rgba(23, 45, 79, 1)};
+&:hover {color:#e68a00};
 border-radius:10px;
- color:#FFFFFF;
+ color:white;
  display:flex;
  align-items:center;
  padding: 0 2rem;
@@ -55,7 +55,7 @@ border-radius:10px;
 
 `
 const Logo = styled(Link)`
-// &:hover {background-color:white; color:white};
+&:hover {color:#e68a00};
 @keyframes TransitioningBackground {
   0% {
     background-position: 1% 0%;
@@ -93,9 +93,9 @@ margin-right:15px`;
 
 const Navbar = () => {
 
-  const {  token } = useContext(UserContext)
+  const { token } = useContext(UserContext)
 
-  
+
 
   return (
     <Nav>

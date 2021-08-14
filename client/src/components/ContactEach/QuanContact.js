@@ -19,10 +19,13 @@ const QuanContact = () => {
         />
         <div className="bio">
           <p>
+
             <span class="first-letter">H</span>ey, my name is Raquan Stanley, and currently, I am a student in the University of Pennsylvania's Full Stack Coding Bootcamp. 
             I am a highly motivated person, who seeks to strive and succeed in all things that I pursue, especially as a coder. 
             Currently located in Allentown, PA, you can find me playing basketball and weightlifting in my freetime.
-        </p>
+          
+
+          </p>
           <div className="fa-icons">
             <div className="contact-icon">
 

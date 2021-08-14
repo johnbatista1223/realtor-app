@@ -17,6 +17,7 @@
         "concurrently": "^5.1.0"
     },
     "dependencies": {
-        "@popperjs/core": "^2.9.3"
+        "@popperjs/core": "^2.9.3",
+        "grommet-icons": "^4.6.0"
     }
 }
