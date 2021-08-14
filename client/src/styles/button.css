@@ -15,11 +15,11 @@
   font-size: large;
 
 }
-.apply-btn:hover {
+/* .apply-btn:hover {
   transition: 1s ease-in-out;
   background: black;
   font-size: 8em;
-}
+} */
 
 .apply-btn:hover svg {
   stroke-dashoffset: -480;
