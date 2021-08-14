@@ -11,6 +11,10 @@
   justify-content: center;
 }
 
+.page-links a {
+  color: white;
+}
+
 .footer-links {
   text-align: center;
 }
@@ -24,9 +28,18 @@
   text-decoration: none;
 }
 
+.footer-a:hover {
+  color: orange;
+}
+
 .coding-a {
   padding-right: 10px;
   text-decoration: none;
+  color: white;
+}
+
+.coding-a:hover {
+  color: orange;
 }
 
 .info {
@@ -34,9 +47,14 @@
   margin-top: 20px;
 }
 
+.info p {
+  color: white;
+}
+
 .after-line:after {
   content: " | ";
   margin-left: 10px;
+  color: white;
 }
 
 @media only screen and (min-width: 1280px) {
