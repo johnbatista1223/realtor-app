@@ -97,12 +97,37 @@ a {
 }
 
 #recover:visited {
+  color: black;
+}
+
+h1 {
   color: white;
+  font-size: 40px;
+}
+
+#welcome {
+  color: black;
+  margin-top: 10px;
+  margin-bottom: -15px;
+}
+
+#tagline {
+  color: black;
+  font-size: 25px;
+  margin-bottom: 50px;
+}
+
+#break {
+  color: white;
+  border-top: 1px solid orange;
+}
+
+#login-h2 {
+  margin-bottom: -5px;
 }
 
 h2 {
-  color: white;
-  font-size: 40px;
+  color: black;
 }
 
 h3 {
