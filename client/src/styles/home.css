@@ -47,6 +47,14 @@
     font-style: italic;
 }
 
+.fa-icons {
+    padding: 10px;
+}
+
+.image {
+    border-radius: 5px 5px 0px 0px;
+}
+
 .for-sale .listings-wrapper .listing-results-wrapper {
     flex: 1 1 auto;
     display: grid;
@@ -96,6 +104,7 @@
     height: 5px;
     position: relative;
     bottom: 5px;
+    border-radius: 0px 0px 5px 5px;
 }
 
 /* .hr {

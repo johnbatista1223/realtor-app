@@ -21,7 +21,7 @@ function Footer() {
                 </div>
             </div>
             <div className="info">
-                <p>Copyright © 2021 RAJA Realty & Development. All Rights Reserved.</p>
+                <p>Copyright © 2021 RAJA Developers. All Rights Reserved.</p>
                 <p>405 Keanu Ct. Point Break, CA 08742 Phone: 732-475-9165</p>
 
             </div>
