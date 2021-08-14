@@ -20,7 +20,7 @@ function Hero() {
 
   return (
     <div className="hero-container-outer">
-       <div class="hero-container">
+      <div class="hero-container">
         <div class="login">
           <div class="title">
             <h1>Login to HomePage</h1>
@@ -73,7 +73,7 @@ function Hero() {
               </div>
             </form>
             <div id="register">
-              <h3>Or create an account</h3>
+              <h3 id="create-h3">Or create an account</h3>
 
 
 

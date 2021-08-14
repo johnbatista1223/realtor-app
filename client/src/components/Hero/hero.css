@@ -1,19 +1,14 @@
 .hero-container-outer {
-
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  
 }
 
 .hero-container {
   font-family: 'Josefin Sans', sans-serif;
-  
   flex: 0 0 30%;
-  
-
 }
 
 .login {
@@ -22,17 +17,19 @@
   background: linear-gradient(to bottom, #e68a00 50%, white);
   padding: 30px;
   border-radius: 5px;
-  margin:20px;
+  margin: 20px;
 }
+
 .title {
   text-align: center;
   color: white;
 }
+
 .signin {
   display: flex;
   flex-direction: column;
   font-size: large;
-  }
+}
 
 .inputs {
   display: flex;
@@ -65,12 +62,15 @@ p {
   background-color: black;
   color: white;
 }
+
 #login-button {
   text-align: center;
 }
+
 #register {
   text-align: center;
 }
+
 #create-account {
   font-family: 'Josefin Sans', sans-serif;
   font-size: large;
@@ -78,7 +78,7 @@ p {
   border: none;
   height: 40px;
   width: 120px;
-  margin-top: 30px;
+  margin-top: 15px;
   /* margin-bottom: 90px; */
   background-color: black;
   color: white;
@@ -88,6 +88,14 @@ a {
   text-align: center;
 }
 
+#create-h3 {
+  margin-top: 35px;
+}
+
+#password {
+  margin-bottom: 5px;
+}
+
 #recover:visited {
   color: white;
 }
@@ -95,16 +103,17 @@ a {
 h2 {
   color: white;
   font-size: 40px;
-  
 }
 
 h3 {
   color: black;
 }
+
 ::placeholder {
   color: lightgray;
   font-size: 20px;
 }
+
 @media screen and (min-width: 992px) {
   .miniHero {
     background-position-y: -150px;
