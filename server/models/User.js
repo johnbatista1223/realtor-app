@@ -1,7 +1,6 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt')
 const withAuth = require('../utils/auth');
-
 const userSchema = new Schema(
   {
     username: {
@@ -15,18 +14,20 @@ const userSchema = new Schema(
       required: true
     },
     password: {
-
       type: String,
       required: true
-
-    }
+    },
+    saveListings:[
+      {
+        id:String,
+        price:String,
+        address:String,
+        image:String
+      }
+    ]
   }
 );
-
-
-
 userSchema.pre("save", async function (next) {
-
   if (!this.isModified("password")) return next()
   try {
     const salt = await bcrypt.genSalt(10);
@@ -35,16 +36,9 @@ userSchema.pre("save", async function (next) {
   } catch {
     return next(error)
   }
-
 })
-
-
 userSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 }
-
 const User = model('User', userSchema);
-
-
-
 module.exports = User;
