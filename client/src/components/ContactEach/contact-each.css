@@ -1,6 +1,7 @@
 .text-center {
     margin-left: 50px;
     margin-right: 50px;
+    background-color: #d9d9d9;
 }
 
 .first-letter {
@@ -39,12 +40,16 @@ img {
 }
 
 .contact-icons {
-    color: rgb(62, 126, 161);
-    filter: drop-shadow(5px 2.5px 1px lightgray);
+    color: black;
+    filter: drop-shadow(5px 2.5px 1px darkgray);
     margin-right: 18px;
     size: 20px;
 }
 
+.contact-icons:hover {
+    color: orange;
+}
+
 .contact-icon:visited {
-    color: rgb(62, 126, 161);
+    color: black;
 }
