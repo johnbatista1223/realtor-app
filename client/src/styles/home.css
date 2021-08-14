@@ -1,5 +1,4 @@
 .for-sale {
-
     flex: 1 1 auto;
     width: 100%;
     display: flex;
@@ -45,7 +44,7 @@
 
 .flag-pending {
     color: red;
-    font-style: italic; 
+    font-style: italic;
 }
 
 .for-sale .listings-wrapper .listing-results-wrapper {
@@ -59,8 +58,7 @@
     font-family: 'Lato', sans-serif;
 }
 
-
-.for-sale .listings-wrapper .listing-results-wrapper .listing-card {    
+.for-sale .listings-wrapper .listing-results-wrapper .listing-card {
     width: 300px;
     height: 455px;
     padding: 10px;
@@ -92,9 +90,9 @@
     height: 35px;
     flex: 1 1 auto;
     background-color: white;
-    
 }
-.details{
+
+.details {
     height: 5px;
     position: relative;
     bottom: 5px;
@@ -107,4 +105,4 @@
 
 #map {
     height: 100%;
-  }
+}

@@ -1,50 +1,9 @@
-/* .footer-wrapper, .footer__about, .footer__widget {
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  background-color: red;
-
-}
- */
-
-/* 
- .footer {
-  position: fixed;
-  height: 50px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  margin-bottom: 0px;
-} */
-
-/* #footer {
-  font-family: 'Josefin Sans', sans-serif;
-  width: 100%;
-  background-color: transparent(70, 70, 70);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 20px;
-}
-
-p {
-  color: black;
-}
-
-/* .ul {
-  text-align: center;
-}
-
-.ul .li{
-  text-align: center;
-} */
-
-/* STYLES SPECIFIC TO FOOTER  */
-
 .footer {
   width: 100%;
   position: relative;
   height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
   background-color: black;
   font-family: 'Josefin Sans', sans-serif;
   bottom: 0px;
@@ -52,73 +11,32 @@ p {
   justify-content: center;
 }
 
-.footer .col {
-  width: 190px;
-  height: auto;
-  float: left;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  padding: 0px 20px 20px 20px;
-}
-
-.footer .col h1 {
-  margin: 0;
-  padding: 0;
-  font-family: inherit;
-  font-size: 18px;
-  line-height: 17px;
-  padding: 20px 20px 5px 20px;
-  color: #e68a00;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.50em;
+.footer-links {
   text-align: center;
 }
 
-.footer .col ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  text-align: left;
+.coding-links {
+  margin-top: 20px;
 }
 
-.footer .col ul li {
-  color: #999999;
-  font-size: 16px;
-  letter-spacing: 0.30em;
-  line-height: 17px;
-  font-family: inherit;
-  font-weight: bold;
-  padding: 5px 10px 5px 25px;
-  cursor: pointer;
-  transition: .2s;
-  -webkit-transition: .2s;
-  -moz-transition: .2s;
+.footer-a {
+  padding-right: 10px;
+  text-decoration: none;
 }
 
-.footer .col ul li a {
-  color: white;
+.coding-a {
+  padding-right: 10px;
+  text-decoration: none;
 }
 
-.social ul li {
-  display: inline-block;
-  padding-right: 5px !important;
+.info {
+  text-align: center;
+  margin-top: 20px;
 }
 
-.footer .col ul li a:hover {
-  color: rgb(72, 151, 188);
-  transition: .1s;
-  -webkit-transition: .1s;
-  -moz-transition: .1s;
-}
-
-svg:hover path {
-  fill: rgb(72, 151, 188);
-}
-
-.clearfix {
-  clear: both;
+.after-line:after {
+  content: " | ";
+  margin-left: 10px;
 }
 
 @media only screen and (min-width: 1280px) {
