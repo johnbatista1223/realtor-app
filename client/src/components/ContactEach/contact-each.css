@@ -40,12 +40,16 @@ img {
 }
 
 .contact-icons {
-    color: rgb(62, 126, 161);
-    filter: drop-shadow(5px 2.5px 1px lightgray);
+    color: black;
+    filter: drop-shadow(5px 2.5px 1px darkgray);
     margin-right: 18px;
     size: 20px;
 }
 
+.contact-icons:hover {
+    color: orange;
+}
+
 .contact-icon:visited {
-    color: rgb(62, 126, 161);
+    color: black;
 }
