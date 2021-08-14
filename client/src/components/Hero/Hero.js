@@ -23,6 +23,7 @@ function Hero() {
        <div class="hero-container">
         <div class="login">
           <div class="title">
+            <h2>Here to help in your search, because there's no place like home!</h2> 
             <h1>Login to HomePage</h1>
           </div>
           <div class="signin">
