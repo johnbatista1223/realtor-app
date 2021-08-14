@@ -1,15 +1,16 @@
 const { AuthenticationError } = require('apollo-server-errors');
+const { user } = require('../config/connection');
 const { User } = require('../models');
-
 const { signToken } = require('../utils/auth');
-
 // Create the functions that fulfill the queries defined in `typeDefs.js`
 const resolvers = {
   Query: {
     users: async () => {
       // Get and return all documents from the classes collection
       return await User.find({});
-    }
+    },
+    listings: async (parent, {  }) => {
+      return User.findOne({ _id:username._id})}
   },
   Mutation: {
     createUser: async (parent, { username, email, password }) => {
@@ -18,28 +19,25 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    login: async (parent, {username, password}) => {
-
-      const user = await User.findOne({username})
-
+    login: async (parent, { username, password }) => {
+      const user = await User.findOne({ username })
       if (!user) {
         throw new AuthenticationError('No user found with this email address')
       }
-
       const correctPw = await user.isCorrectPassword(password);
-
       if (!correctPw) {
-
         throw new AuthenticationError("Incorrect credentials")
-
       }
-
       const token = signToken(user)
-
       return { token, user }
     },
+    saveListings: async (parent, { listing, username, }) => {
+      console.log(listing);
+      
+      const result = await User.findOneAndUpdate({username},{$push:{saveListings:listing}},{new:true})
+      console.log("woksdfs",result);
+      return { token: "thththt", user: {username:"hsahdas"} }
+    }
   },
-  
 };
-
 module.exports = resolvers;
