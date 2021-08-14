@@ -27,7 +27,7 @@ function Hero() {
           </div>
           <div class="signin">
             <form>
-              <div class="inputs">
+              <div class="inputs username-title">
                 <p>Username</p>
                 <input
                   id="username"

@@ -24,7 +24,7 @@ const Home = () => {
   const [errorMessage, setErrorMessage] = useState("")
 
   const [carouselImages, setCarouselImages] = useState([])
-  const [data, setData] = useState([]); // Sort listings from price low to high
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     //Get listings
@@ -68,7 +68,7 @@ const Home = () => {
 
 
   return (
-    <div className="for-sale">
+    <div className="for-sale card-background">
 
       {carouselImages.length > 0 && <Carousel images={carouselImages} closeCarousel={() => setCarouselImages([])} />}
       <div className="filter-wrapper">
@@ -118,7 +118,7 @@ const ListingEntry = (props) => {
   console.log(props.listing)
   return (
     <div className="listing-card">
-             <a href={googlemaplink} class="fa-map" target="_blank"><FaMapMarked size={30} /></a>
+      <a href={googlemaplink} class="fa-map" target="_blank"><FaMapMarked size={30} /></a>
       <div className="image" onClick={() => {
 
         props.carouselImages(props.listing.photos)

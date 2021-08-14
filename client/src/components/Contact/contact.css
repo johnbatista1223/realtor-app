@@ -1,16 +1,17 @@
 #dev-team {
     font-size: 50px;
-    color: rgb(62, 126, 161);
+    color: black;
     text-align: center;
     margin-top: -25px;
+    padding-top: 30px;
 }
 
 hr {
     display: block;
     height: 2px;
     width: 97%;
-    color: rgb(62, 126, 161);
-    background-color: rgb(62, 126, 161);
+    color: black;
+    background-color: black;
     margin-top: 30px;
     margin-bottom: 30px;
 }

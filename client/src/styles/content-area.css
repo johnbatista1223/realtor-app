@@ -83,10 +83,7 @@
   flex-direction: column;
 
 }
-.location .location-group {
 
-
-}
 .city-input {
   font-size: 1rem;
   padding: 0.4rem;
@@ -200,7 +197,7 @@
 }
 
 .fa-map {
-  color: green;
+  color: lightskyblue;
   display: flex;
   flex-direction: end;
 }

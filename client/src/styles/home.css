@@ -1,5 +1,4 @@
 .for-sale {
-
     flex: 1 1 auto;
     width: 100%;
     display: flex;
@@ -7,16 +6,16 @@
 }
 
 .for-sale .filter-wrapper {
-    flex: 0 0 25%;
+    flex: 0 0 4%;
     padding-right: 10px;
-    border-right: solid 1px black;
+    border-right: solid 2px black;
 }
 
 .for-sale .listings-wrapper {
     flex: 1 1 auto;
     display: flex;
     flex-flow: column;
-    padding: 20px;
+    padding: 50px;
 }
 
 .for-sale .listings-wrapper .search-area {
@@ -34,6 +33,10 @@
     color: #c8c8c8;
 }
 
+.details {
+    color: charcoal;
+}
+
 .flag-contingent {
     color: Orange;
     font-weight: bold;
@@ -41,7 +44,7 @@
 
 .flag-pending {
     color: red;
-    font-style: italic; 
+    font-style: italic;
 }
 
 .for-sale .listings-wrapper .listing-results-wrapper {
@@ -52,17 +55,18 @@
     justify-items: center;
     align-items: center;
     gap: 35px;
-     font-family: 'Lato', sans-serif;
-
+    font-family: 'Lato', sans-serif;
 }
 
-.for-sale .listings-wrapper .listing-results-wrapper .listing-card {    
+.for-sale .listings-wrapper .listing-results-wrapper .listing-card {
     width: 300px;
     height: 455px;
     padding: 10px;
     display: flex;
     flex-direction: column;
     box-shadow: 0 0 20px #000;
+    background-color: black;
+    border-radius: 15px;
 }
 
 .for-sale .listings-wrapper .listing-results-wrapper .listing-card .image {
@@ -73,6 +77,7 @@
     justify-content: center;
     align-items: center;
     background-color: grey;
+    box-shadow: 0 0 20px grey;
 }
 
 .for-sale .listings-wrapper .listing-results-wrapper .listing-card .image img {
@@ -85,9 +90,9 @@
     height: 35px;
     flex: 1 1 auto;
     background-color: white;
-    
 }
-.details{
+
+.details {
     height: 5px;
     position: relative;
     bottom: 5px;
@@ -100,4 +105,4 @@
 
 #map {
     height: 100%;
-  }
+}
