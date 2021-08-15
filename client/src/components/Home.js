@@ -146,7 +146,7 @@ const ListingEntry = (props) => {
           {props.listing.location.address.city}, {props.listing.location.address.state_code} {props.listing.location.address.postal_code}
         </div>
         {props.listing.flags.is_contingent !== null && <div className="flag-contingent">Contingent</div>}
-        {props.listing.flags.is_pending !== null && <div className="flag-pending">Is Pending</div>}
+        {props.listing.flags.is_pending !== null && <div className="flag-pending">Is pending</div>}
         {/* <div className="status">
         
       {
