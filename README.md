@@ -41,6 +41,9 @@ Head to this link to watch a demonstration of the app- [Demo]()
 ## Display of listings
 ![Screenshot (527)](https://user-images.githubusercontent.com/77814900/129487761-7bedf5c4-33c1-49f7-8ff2-f306d69440ca.png)
 
+## Display of photos for listings
+![Screenshot (528)](https://user-images.githubusercontent.com/77814900/129488011-67dcd1ef-c9e8-46db-b766-45aa237ad5a2.png)
+
 
 
 
@@ -71,7 +74,7 @@ Raquan Stanley
 ![Raquan's Repository's Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=Quando24&theme=blue-green)
 
 # **Instructions**
->Head to our website: 
+## Head to our website: [Homepage](https://homepage-realtor-app.herokuapp.com/)
 
 OR
 
