@@ -39,7 +39,7 @@ const Home = () => {
         url: 'https://us-real-estate.p.rapidapi.com/for-sale',
         params: { offset: '0', limit: '', price_min: priceLow, price_max: priceHigh, state_code: stateCode, city: city, sort: 'newest' },
         headers: {
-          'x-rapidapi-key': 'b8cff983eemsh2ff101990d69507p1a41e2jsn1c950c5975d1',
+          'x-rapidapi-key': '9259ead76cmsh2de0e168743c1edp1edf72jsnbc26da5c3fdd',
           'x-rapidapi-host': 'us-real-estate.p.rapidapi.com'
           // b8cff983eemsh2ff101990d69507p1a41e2jsn1c950c5975d Amy's other API key
         }
