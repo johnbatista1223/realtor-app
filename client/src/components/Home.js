@@ -104,7 +104,7 @@ const ListingEntry = (props) => {
         listing: {
           price: props.listing.list_price,
           address: props.listing.location.address.line,
-          image: props.listing.primary_photo.href
+          image: props.listing.primary_photo.href,
         },
         username: "amysmerlick"
       }
