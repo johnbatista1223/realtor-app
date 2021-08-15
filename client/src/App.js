@@ -19,6 +19,9 @@ import { UserContext } from './context/UserProvider';
 import "./App.css";
 import { Link } from "react-router-dom"
 import Logout from './components/Logout.js'
+import { SAVE_HOME } from './utils/mutations';
+
+
 
 function App() {
   const { token } = useContext(UserContext)
@@ -52,7 +55,7 @@ function App() {
       <div className="content-wrapper">
         <Switch>
           <Route exact path="/homes"  component={() => token !== undefined ? <Home /> : <Hero />}/>
-          <Route exact path="/Userprofile" component={() => token !== undefined ? <Userprofile /> : <Hero />}/>
+          <Route exact path="/Userprofile" component={(SAVE_HOME) => token !== undefined ? <Userprofile /> : <Hero />}/>
           <Route exact path="/register" component={() => token !== undefined ? <Home /> : <RegisterUser />}/>
           <Route exact path="/contact">
             <Contact />

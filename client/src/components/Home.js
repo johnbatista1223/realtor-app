@@ -95,7 +95,7 @@ Home.defaultProps = {
 }
 const ListingEntry = (props) => {
   console.log('props working', props)
-  const [saveListings, { error, data }] = useMutation(SAVE_HOME);
+  const [saveListings, { loading, data }] = useMutation(SAVE_HOME);
   let history = useHistory()
   const saveFavorite = (listingid) => {
     console.log('listingggg', listingid)

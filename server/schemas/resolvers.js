@@ -9,8 +9,8 @@ const resolvers = {
       // Get and return all documents from the classes collection
       return await User.find({});
     },
-    listings: async (parent, {  }) => {
-      return User.findOne({ _id:username._id})}
+    // listings: async (parent, {  }) => {
+    //   return User.findOne({ signToken })}
   },
   Mutation: {
     createUser: async (parent, { username, email, password }) => {
@@ -31,6 +31,7 @@ const resolvers = {
       const token = signToken(user)
       return { token, user }
     },
+    
     saveListings: async (parent, { listing, username, }) => {
       console.log(listing);
       

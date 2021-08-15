@@ -20,6 +20,7 @@ z-index:100;
 background-color:black;
 width:100%;
 font-size: 25px;
+
 .heart {
   fill: red;
   position: relative;
