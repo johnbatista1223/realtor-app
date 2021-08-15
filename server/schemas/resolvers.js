@@ -31,11 +31,17 @@ user: async (parent, { username }) => {
     
     saveListings: async (parent, { listing, username, }) => {
       console.log(listing);
-      console.log("username");
+      console.log(username);
       
-      const result = await User.findOneAndUpdate({username},{$push:{saveListings:listing}},{new:true})
-      console.log("woksdfs",result);
-      return { token: "thththt", user: {username:"hsahdas"} }
+      try {
+        const result = await User.findOneAndUpdate({"username": username},{$push:{saveListings:listing.listingId}})
+        console.log("woksdfs",result);
+        return { token: "thththt", user: {username:"hsahdas"} }
+      } catch(e) {
+        console.log(e)
+      }
+      
+      
     }
   },
 };

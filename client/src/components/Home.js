@@ -17,8 +17,12 @@ import { SAVE_HOME } from '../utils/mutations';
 import { useMutation } from '@apollo/client';
 import Userprofile from './Userprofile';
 import { useHistory } from 'react-router-dom';
+
+// const api_key = process.env.REACT_APP_API_KEY;
+// console.log(process.env.REACT_APP_API_KEY)
+
 const Home = () => {
-  const { token } = useContext(UserContext)
+  const { token, username } = useContext(UserContext)
   const [listings, setListings] = useState([])
   const [stateCode, setStateCode] = useState("")
   const [city, setCity] = useState("")
@@ -79,7 +83,7 @@ const Home = () => {
         <div className="listing-results-wrapper">
           {listings.map((listing, index) => {
             console.log(listings);
-            return <ListingEntry key={index} listing={listing} carouselImages={
+            return <ListingEntry key={index} listing={listing} username={username} carouselImages={
               (images) => {
                 setCarouselImages(images)
               }
@@ -99,14 +103,13 @@ const ListingEntry = (props) => {
   let history = useHistory()
   const saveFavorite = (listingid) => {
     console.log('listingggg', listingid)
+    console.log(props.username)
     const { data } = saveListings({
       variables: {
         listing: {
-          price: props.listing.list_price,
-          address: props.listing.location.address.line,
-          image: props.listing.primary_photo.href,
+          listingId: listingid
         },
-        username: "amysmerlick"
+        username: props.username
       }
     });
     console.log("data", data)
@@ -127,7 +130,7 @@ const ListingEntry = (props) => {
       <div className="details">
         <div className="fa-icons">
           <div className="contact-icon">
-            <div className="contact-icons fa-heart" onClick={saveFavorite.bind(this, props.listing.property_id)}><FaHeart size={30} /></div>
+            <div className="contact-icons fa-heart" onClick={() => {saveFavorite(props.listing.property_id)}}><FaHeart size={30} /></div>
           </div>
         </div>
         <div className="price">

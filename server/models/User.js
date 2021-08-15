@@ -17,14 +17,7 @@ const userSchema = new Schema(
       type: String,
       required: true
     },
-    saveListings:[
-      {
-        id:String,
-        price:String,
-        address:String,
-        image:String
-      }
-    ]
+    saveListings:[String]
   }
 );
 userSchema.pre("save", async function (next) {
