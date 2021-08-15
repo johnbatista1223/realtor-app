@@ -2,9 +2,7 @@ import { gql } from '@apollo/client';
 export const QUERY_LISTINGS = gql`
   query getListings {
     listings {
-      price
-      address
-      image
+      id
       }
     
   }
@@ -18,10 +16,7 @@ export const QUERY_LISTINGS = gql`
       username
       email
       saveListings {
-        _id
-        address
-        price
-        image
+        listingId
       }
     }
   }

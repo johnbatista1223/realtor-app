@@ -63,7 +63,7 @@ function Hero() {
                     })
                     console.log(data)
                     Auth.login(data.login.token);
-                    updateToken()
+                    updateToken(data.login.user.username)
                     history.push('/homes')
                   } catch (e) {
                     setIsError(true)

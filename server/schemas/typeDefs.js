@@ -17,10 +17,7 @@ const typeDefs = gql`
     user: User
   }
   input Listing {
-    id:String
-    price:Int
-    address:String
-    image:String
+    listingId: String
 }
   type Mutation {
     createUser(username: String!, email: String!, password: String!): Auth

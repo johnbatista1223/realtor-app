@@ -8,16 +8,18 @@ export default function UserProvider(props) {
     const initState = {
 
         
-        token: localStorage.getItem('id_token') || undefined
+        token: localStorage.getItem('id_token') || undefined,
+        username: ""
 
     }
 
     const [ userState, setUserState ] = useState(initState)
 
-    let updateToken = () => {
+    let updateToken = (username) => {
 
         setUserState({
             ...userState,
+            username: username,
             token: localStorage.getItem('id_token') || undefined
 
         })
