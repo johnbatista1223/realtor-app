@@ -6,6 +6,10 @@ import { QUERY_LISTINGS } from '../utils/queries';
 const Userprofile = () => {
   const {loading, data } = useQuery(QUERY_LISTINGS);
 
+  useEffect(() =>{
+
+
+  }, [])
 if(loading){
   return <div>test</div>
 }
