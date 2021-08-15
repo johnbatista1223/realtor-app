@@ -27,9 +27,25 @@
 Head to this link to watch a demonstration of the app- [Demo]()
 
 # **Usage**
-> ![Welcome to Homepage!](https://user-images.githubusercontent.com/77814900/129484491-55a14516-1797-40eb-9465-b5d1776100bf.png)
-> ![Screenshot (522)](https://user-images.githubusercontent.com/77814900/129484525-703cb451-30d1-46cb-a33d-2da5ee412d69.png)
-> ![Screenshot (524)](https://user-images.githubusercontent.com/77814900/129484582-9b57909e-05c8-42ba-8ff9-c9020e720d0c.png)
+
+## Welcome to Homepage
+
+![Welcome to Homepage!](https://user-images.githubusercontent.com/77814900/129484491-55a14516-1797-40eb-9465-b5d1776100bf.png)
+
+## Register to Homepage
+![Register to our Site)](https://user-images.githubusercontent.com/77814900/129484525-703cb451-30d1-46cb-a33d-2da5ee412d69.png)
+
+## Begin your Search
+![Begin Search](https://user-images.githubusercontent.com/77814900/129484582-9b57909e-05c8-42ba-8ff9-c9020e720d0c.png)
+
+## Display of listings
+![Screenshot (527)](https://user-images.githubusercontent.com/77814900/129487761-7bedf5c4-33c1-49f7-8ff2-f306d69440ca.png)
+
+
+
+
+
+
 
 
 
