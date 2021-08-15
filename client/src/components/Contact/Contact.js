@@ -19,7 +19,7 @@ const Contact = () => {
       <JohnsContact />
       <hr />
       <QuanContact />
-    </div>
+    </div >
   )
 
 };
