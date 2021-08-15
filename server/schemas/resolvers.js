@@ -5,12 +5,9 @@ const { signToken } = require('../utils/auth');
 // Create the functions that fulfill the queries defined in `typeDefs.js`
 const resolvers = {
   Query: {
-    users: async () => {
-      // Get and return all documents from the classes collection
-      return await User.find({});
+user: async (parent, { username }) => {
+      return User.findOne({ username }).populate('saveLstings');
     },
-    // listings: async (parent, {  }) => {
-    //   return User.findOne({ signToken })}
   },
   Mutation: {
     createUser: async (parent, { username, email, password }) => {
@@ -34,6 +31,7 @@ const resolvers = {
     
     saveListings: async (parent, { listing, username, }) => {
       console.log(listing);
+      console.log("username");
       
       const result = await User.findOneAndUpdate({username},{$push:{saveListings:listing}},{new:true})
       console.log("woksdfs",result);

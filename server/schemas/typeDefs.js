@@ -10,6 +10,7 @@ const typeDefs = gql`
   type Query {
     users: [User]
     listings:[QListing]
+    user(username: String!): User
   }
   type Auth {
     token: ID!
