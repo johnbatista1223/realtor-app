@@ -20,13 +20,19 @@ const typeDefs = gql`
   type Listing {
     _id: ID
     listingPrice: String
-    listingAddress: String
+		listingAddress: String
+    listingState: String
+    listingCity: String
+    listingZip: String
+    listingImage: String
+    listingId: String
     listingAuthor: String
+    
   }
   type Mutation {
     createUser(username: String!, email: String!, password: String!): Auth
     login(username: String!, password: String!): Auth
-    saveListings(listingPrice: String!, listingAddress: String!, listingAuthor: String!): Listing
+    saveListings(listingPrice: String!, listingAddress: String!, listingState: String!, listingCity: String!, listingZip: String!, listingImage: String!, listingId: String!, listingAuthor: String!): Listing
   }
 
 `;

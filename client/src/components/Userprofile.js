@@ -1,8 +1,10 @@
 import { useQuery } from '@apollo/client';
 import React, { useEffect } from 'react';
-import Carousel from './Caousel/carousel';
+
 import { QUERY_LISTINGS } from '../utils/queries';
 import Auth from '../utils/auth.js';
+import '../styles/home.css'
+
 const Userprofile = () => {
   const { loading, data } = useQuery(QUERY_LISTINGS, {
     variables: { username: Auth.getProfile().data.username },
@@ -19,12 +21,34 @@ const Userprofile = () => {
       {data.user.listings.map(listing => {
         console.log(listing)
         return (
-          <div>
-            <p>{listing.listingPrice}</p>
-            <p>{listing.listingAddress}</p>
-          </div>
+          <ListingEntryProfile price={listing.listingPrice} address={listing.listingAddress} city={listing.listingCity} state={listing.listingState} zip={listing.listingZip} image={listing.images} />
         )
       })}
+    </div>
+  )
+}
+
+const ListingEntryProfile = (props) => {
+ 
+  console.log(props)
+  
+ 
+  return (
+    <div className="listing-card listing-results-wrapper">
+      <div className="image">
+        {
+          props.images !== null ? <img src={props.images} /> : <span> NO PHOTO AVAILABLE</span>
+        }
+      </div>
+      <div className="details">
+        
+        <div className="price">
+          <em>List Price: ${props.price}</em>
+        </div>
+        <div className="address">
+          {props.address}, {props.city}, {props.state} {props.zip}
+        </div> 
+      </div>
     </div>
   )
 }
