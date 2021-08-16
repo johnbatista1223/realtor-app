@@ -155,8 +155,8 @@ const ListingEntry = (props) => {
         {props.listing.description.sqft} Square Feet
 
         </div>
-        {props.listing.flags.is_contingent === null ? <div></div> : <div className="flag-contingent">Contingent</div>}
-        {props.listing.flags.is_pending === null ? <div></div> : <div className="flag-pending">Pending</div>}
+        {props.listing.flags.is_contingent === null ? <div></div> : <div className="flag-contingent"> Status: Contingent</div>}
+        {props.listing.flags.is_pending === null ? <div></div> : <div className="flag-pending"> Status: Pending</div>}
         {/* <div className="status">
         
       {
