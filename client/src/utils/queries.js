@@ -4,9 +4,14 @@ query user($username: String!) {
   user(username: $username) {
     username
     listings {
-      _id
-      listingPrice
-      listingAddress
+    _id
+		listingPrice
+		listingAddress
+    listingState
+    listingCity
+    listingZip
+    listingImage
+    listingId
     }
   }
 }

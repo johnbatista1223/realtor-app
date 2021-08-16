@@ -8,10 +8,23 @@ type: String,
 }, 
 listingAddress: { 
 type: String, 
-}, 
-listingAuthor: { 
+},
+listingImage: { 
+    type: String, 
+    },
+listingState: { 
 type: String, 
-}, 
+},
+listingCity: { 
+type: String, 
+},
+listingZip: { 
+type: String, 
+},
+listingId: { 
+    type: String, 
+    }
+
 }); 
  
 const Listing = model('Listing', listingSchema); 

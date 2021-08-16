@@ -105,11 +105,17 @@ const ListingEntry = (props) => {
   console.log('props working', props)
   const [saveListings, { loading, data }] = useMutation(SAVE_HOME);
   let history = useHistory()
-  const saveFavorite = (listingPrice, listingAddress) => {
+  const saveFavorite = () => {
+    console.log(Auth.getProfile().data.useranme)
     const { data } = saveListings({
       variables: {
-        listingPrice: listingPrice.toString(),
-        listingAddress: listingAddress,
+        listingPrice: props.listing.list_price.toString(),
+        listingAddress: props.listing.location.address.line,
+        listingState: props.listing.location.address.state_code,
+        listingCity: props.listing.location.address.city,
+        listingZip: props.listing.location.address.postal_code,
+        listingImage: props.listing.primary_photo.href,
+        listingId: props.listing.property_id,
         listingAuthor: Auth.getProfile().data.username
       }
   });
@@ -131,7 +137,7 @@ const ListingEntry = (props) => {
       <div className="details">
         <div className="fa-icons">
           <div className="contact-icon">
-          <div className="contact-icons fa-heart" onClick={() => {saveFavorite(props.listing.list_price, props.listing.location.address.line)}}><FaHeart size={30} /></div>
+          <div className="contact-icons fa-heart" onClick={() => {saveFavorite()}}><FaHeart size={30} /></div>
           </div>
         </div>
         <div className="price">

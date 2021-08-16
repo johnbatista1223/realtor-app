@@ -25,12 +25,18 @@ mutation createUser($username: String!, $email: String!, $password: String!) {
 }
 `;
 export const SAVE_HOME = gql`
-mutation saveListings($listingPrice: String!, $listingAddress: String!, $listingAuthor: String!) {
-	saveListings(listingPrice: $listingPrice, listingAddress: $listingAddress, listingAuthor: $listingAuthor) {
+mutation saveListings($listingPrice: String!, $listingAddress: String!, $listingState: String!, $listingCity: String!, $listingZip: String!, $listingImage: String!, $listingId: String!, $listingAuthor: String!) {
+	saveListings(listingPrice: $listingPrice, listingAddress: $listingAddress, listingState: $listingState, listingCity: $listingCity, listingZip: $listingZip, listingImage: $listingImage, listingId: $listingId, listingAuthor: $listingAuthor) {
 		_id
 		listingPrice
 		listingAddress
-		listingAuthor
+    listingState
+    listingCity
+    listingZip
+    listingImage
+    listingId
+    listingAuthor
+
 	}
 	}
 `;

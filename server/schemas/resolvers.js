@@ -30,18 +30,31 @@ user: async (parent, { username }) => {
       return { token, user }
     },
     
-    saveListings: async (parent, { listingPrice, listingAddress, listingAuthor}, context) => { 
+    saveListings: async (parent, { listingPrice, listingAddress, listingImage, listingState, listingCity, listingZip, listingId, listingAuthor}, context) => { 
       console.log(listingPrice)
+
       if (listingAuthor) { 
-      const listing = await Listing.create({ 
-      listingPrice, 
-      listingAddress 
-      }); 
-      await User.findOneAndUpdate( 
-      { username: listingAuthor }, 
-      { $addToSet: { listings: listing._id } } 
-      ); 
-      return listing; 
+        try {
+          const listing = await Listing.create({ 
+              listingPrice, 
+              listingAddress,
+              listingState,
+              listingCity, 
+              listingZip,
+              listingId
+          });
+
+          await User.findOneAndUpdate( 
+              { username: listingAuthor }, 
+              { $addToSet: { listings: listing._id } } 
+          ); 
+          return listing; 
+        } catch(e) {
+          console.log(e)
+        }
+      
+      
+      
       } 
       } 
       
