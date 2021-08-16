@@ -1,13 +1,7 @@
-<!-- background: #14174a -->
-<!-- color: #ffc8d9 -->
-<!-- font: centurygothic -->
-
-
-
 
 
 # 🏡 **Home Page** 🏡
-<p> A full-stack application using MongoDB, Express. js, React. js, and Node. js (MERN) that allows a user to create an account in order to search for properties that are for sale and available rentals. </p>
+<p> HomePage is a property acquisition search application, of which, allows the user to view housing market data, in real time. This is a full-stack application using MongoDB, Express. js, React. js, and Node. js (MERN) that allows a user to create an account in order to search for properties that are for sale. </p>
 
 # **Description**
 <p>Millions of shoppers are looking for their first, next, forever, and even their temporary homes on any given day. Home Page is an app devised to offer customers with an on-demand availability of the housing market. </p>
@@ -56,10 +50,9 @@ Head to this link to watch a demonstration of the app- [Demo]()
 
 In the command line you will want to ***npm install***
 
+Next, you will ***npm run develop***
 
-Next, you will....
-
-
+in order to have the front end working simultaneously with the back end. 
 
 
 # **Contributors**
