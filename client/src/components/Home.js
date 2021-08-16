@@ -17,6 +17,7 @@ import { SAVE_HOME } from '../utils/mutations';
 import { useMutation } from '@apollo/client';
 import Userprofile from './Userprofile';
 import { useHistory } from 'react-router-dom';
+import Auth from '../utils/auth.js';
 
 // const api_key = process.env.REACT_APP_API_KEY;
 // console.log(process.env.REACT_APP_API_KEY)
@@ -40,9 +41,11 @@ const Home = () => {
         url: 'https://us-real-estate.p.rapidapi.com/for-sale',
         params: { offset: '0', limit: '', price_min: priceLow, price_max: priceHigh, state_code: stateCode, city: city, sort: 'newest' },
         headers: {
-          'x-rapidapi-key': '9259ead76cmsh2de0e168743c1edp1edf72jsnbc26da5c3fdd',
+          'x-rapidapi-key': '6fff403699msh5b1976d32595c4cp1d0a2cjsn96fb98ccff53',
           'x-rapidapi-host': 'us-real-estate.p.rapidapi.com'
           // b8cff983eemsh2ff101990d69507p1a41e2jsn1c950c5975d Amy's other API key
+          // 6fff403699msh5b1976d32595c4cp1d0a2cjsn96fb98ccff53 Raquans API key
+          // 9259ead76cmsh2de0e168743c1edp1edf72jsnbc26da5c3fdd Amy's API key
         }
       };
       axios.request(options).then(function (response) {
@@ -102,17 +105,14 @@ const ListingEntry = (props) => {
   console.log('props working', props)
   const [saveListings, { loading, data }] = useMutation(SAVE_HOME);
   let history = useHistory()
-  const saveFavorite = (listingid) => {
-    console.log('listingggg', listingid)
-    console.log(props.username)
+  const saveFavorite = (listingPrice, listingAddress) => {
     const { data } = saveListings({
       variables: {
-        listing: {
-          listingId: listingid
-        },
-        username: props.username
+        listingPrice: listingPrice.toString(),
+        listingAddress: listingAddress,
+        listingAuthor: Auth.getProfile().data.username
       }
-    });
+  });
     console.log("data", data)
     // history.push("/Userprofiles")
   }
@@ -131,7 +131,7 @@ const ListingEntry = (props) => {
       <div className="details">
         <div className="fa-icons">
           <div className="contact-icon">
-            <div className="contact-icons fa-heart" onClick={() => {saveFavorite(props.listing.property_id)}}><FaHeart size={30} /></div>
+          <div className="contact-icons fa-heart" onClick={() => {saveFavorite(props.listing.list_price, props.listing.location.address.line)}}><FaHeart size={30} /></div>
           </div>
         </div>
         <div className="price">
