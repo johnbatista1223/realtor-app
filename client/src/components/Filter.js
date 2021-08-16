@@ -101,14 +101,14 @@ const Filter = (props) => {
             </select>
             </div>
           </div>
-          <select name="housetype" className="filters housetype" onChange={() => {console.log("test")}}>
+          {/* <select name="housetype" className="filters housetype" onChange={() => {console.log("test")}}>
             <option value="all" selected>All House Types</option>
             {housetypes()}
           </select>
           <select name="bedrooms" className="filters bedrooms" onChange={() => {console.log("test")}}>
             <option value="0" selected>0+ BR</option>
             {bedrooms()}
-          </select>
+          </select> */}
           
           <div className="filters price">
             <span style={{color: "black", "textAlign": "left"}} className="title">Price</span>
