@@ -6,28 +6,28 @@ const typeDefs = gql`
     username: String
     email: String
     password: String
+    listings: [Listing]!
   }
   type Query {
     users: [User]
-    listings:[QListing]
+    listing(listingId: ID!): Listing
     user(username: String!): User
   }
   type Auth {
     token: ID!
     user: User
   }
-  input Listing {
-    listingId: String
-}
+  type Listing {
+    _id: ID
+    listingPrice: String
+    listingAddress: String
+    listingAuthor: String
+  }
   type Mutation {
     createUser(username: String!, email: String!, password: String!): Auth
     login(username: String!, password: String!): Auth
-    saveListings(listing: Listing!,username: String!):Auth
+    saveListings(listingPrice: String!, listingAddress: String!, listingAuthor: String!): Listing
   }
-  type QListing {
-    price:Int
-    address:String
-    image:String
-}
+
 `;
 module.exports = typeDefs;

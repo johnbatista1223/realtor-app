@@ -2,11 +2,12 @@ const { AuthenticationError } = require('apollo-server-errors');
 const { user } = require('../config/connection');
 const { User } = require('../models');
 const { signToken } = require('../utils/auth');
+const { Listing } = require('../models'); 
 // Create the functions that fulfill the queries defined in `typeDefs.js`
 const resolvers = {
   Query: {
 user: async (parent, { username }) => {
-      return User.findOne({ username }).populate('saveLstings');
+      return User.findOne({ username }).populate('listings');
     },
   },
   Mutation: {
@@ -29,20 +30,21 @@ user: async (parent, { username }) => {
       return { token, user }
     },
     
-    saveListings: async (parent, { listing, username, }) => {
-      console.log(listing);
-      console.log(username);
+    saveListings: async (parent, { listingPrice, listingAddress, listingAuthor}, context) => { 
+      console.log(listingPrice)
+      if (listingAuthor) { 
+      const listing = await Listing.create({ 
+      listingPrice, 
+      listingAddress 
+      }); 
+      await User.findOneAndUpdate( 
+      { username: listingAuthor }, 
+      { $addToSet: { listings: listing._id } } 
+      ); 
+      return listing; 
+      } 
+      } 
       
-      try {
-        const result = await User.findOneAndUpdate({"username": username},{$push:{saveListings:listing.listingId}})
-        console.log("woksdfs",result);
-        return { token: "thththt", user: {username:"hsahdas"} }
-      } catch(e) {
-        console.log(e)
-      }
-      
-      
-    }
   },
 };
 module.exports = resolvers;
