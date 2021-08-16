@@ -88,6 +88,10 @@
     box-shadow: 0 0 20px grey;
 }
 
+.details {
+    margin-bottom: -6px;
+}
+
 .for-sale .listings-wrapper .listing-results-wrapper .listing-card .image img {
     object-fit: contain;
     width: 100%;
