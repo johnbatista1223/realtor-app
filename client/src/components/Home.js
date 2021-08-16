@@ -31,6 +31,7 @@ const Home = () => {
   const [errorMessage, setErrorMessage] = useState("")
   const [carouselImages, setCarouselImages] = useState([])
   const [data, setData] = useState([]);
+
   useEffect(() => {
     //Get listings
     if (!(stateCode.length === 0 || city.length === 0)) {
@@ -137,13 +138,22 @@ const ListingEntry = (props) => {
           <em>List Price: ${props.listing.list_price}</em>
         </div>
         <div className="address">
-          {/* <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFrEl2FBtQieNOY3GNxd_NFFFYI-9ViXs&callback=initMap"></script> */}
           {props.listing.location.address.line}
         </div>
         <div className="location">
           {/* <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script> */}
           {/* {props.listing.location.flags.is_contingent} */}
           {props.listing.location.address.city}, {props.listing.location.address.state_code} {props.listing.location.address.postal_code}
+        </div>
+        <div className="bedrooms">
+          {props.listing.description.beds} Bedrooms
+        </div>
+        <div className="bathrooms">
+          {props.listing.description.baths} Bathrooms
+        </div>
+        <div className="squarefeet">
+        {props.listing.description.sqft} Square Feet
+
         </div>
         {props.listing.flags.is_contingent === null ? <div></div> : <div className="flag-contingent">Contingent</div>}
         {props.listing.flags.is_pending === null ? <div></div> : <div className="flag-pending">Pending</div>}

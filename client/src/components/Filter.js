@@ -156,7 +156,7 @@ const Filter = (props) => {
         </div>
         <button className ='apply-btn' onClick={() => {
           console.log("Click");
-          props.updateFilters(priceLow, priceHigh, city, state)}}>Submit</button>
+          props.updateFilters(priceLow, priceHigh, city, state )}}>Submit</button>
       </section>
       
     )
