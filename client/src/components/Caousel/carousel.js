@@ -4,8 +4,6 @@ import './carousel.css';
 function Carousel(props) {
 
     const [ imgNumber, setImgNumber ] = useState(0)
-
-    console.log(props.images[imgNumber])
     return (
 
         <div class="carousel-backdrop">
@@ -18,7 +16,6 @@ function Carousel(props) {
 
                 <div className="pip-wrapper">
                     {props.images.map((img, index) => {
-                        console.log(index)
                         return (<div key={index} className={imgNumber === index ? "pip active" : "pip"} onClick={() => {
                             setImgNumber(index)}}
                         ></div>)
