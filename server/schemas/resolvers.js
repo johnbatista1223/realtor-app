@@ -12,7 +12,6 @@ user: async (parent, { username }) => {
   },
   Mutation: {
     createUser: async (parent, { username, email, password }) => {
-      console.log(username, email, password)
       const user = await User.create({ username, email, password });
       const token = signToken(user);
       return { token, user };
@@ -31,7 +30,6 @@ user: async (parent, { username }) => {
     },
     
     saveListings: async (parent, { listingPrice, listingAddress, listingImage, listingState, listingCity, listingZip, listingId, listingAuthor}, context) => { 
-      console.log(listingPrice)
 
       if (listingAuthor) { 
         try {
@@ -50,7 +48,6 @@ user: async (parent, { username }) => {
           ); 
           return listing; 
         } catch(e) {
-          console.log(e)
         }
       
       
