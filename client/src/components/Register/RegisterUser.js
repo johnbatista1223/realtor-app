@@ -54,39 +54,23 @@ const RegisterUser = (props) => {
 
                                 e.preventDefault()
 
-                                console.log(username, email, password, pwConfirm)
-                                if (username.length === 0 || email.length === 0 || password.length === 0 || pwConfirm.length === 0) {
 
-                                    console.log("One or more fields were left blank")
+                                if (username.length === 0 || email.length === 0 || password.length === 0 || pwConfirm.length === 0) {
                                 } else {
 
                                     if (password !== pwConfirm) {
 
-                                        console.log("The password you entered do not match")
                                     } else {
-
-                                            
-
                                     try {
-                                        console.log({ email: email, username: username, password: password })
                                         const { data } = await create({
                                             variables: { email: email, username: username, password: password }
                                             });
-                                            console.log(data)
                                         
                                         history.push("/")
                                       } catch (e) {
-                                          console.log("ERROR")
-                                        console.error(e);
-                                      }
-
-                            
-
+                                      }                          
                                     }
                                 }
-
-                                
-
                                 }}> Submit</button>
                     </div>
                 </div>

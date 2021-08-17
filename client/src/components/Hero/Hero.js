@@ -61,7 +61,6 @@ function Hero() {
                     const { data } = await login({
                       variables: { username: username, password: password }
                     })
-                    console.log(data)
                     Auth.login(data.login.token);
                     updateToken(data.login.user.username)
                     history.push('/homes')

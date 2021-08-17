@@ -43,7 +43,6 @@ const Filter = (props) => {
             
             <label for="state-dropdown">State</label>
             <select id="state-dropdown" onChange={(e) => {
-              console.log(e.target.value)
               setState(e.target.value)
             }}>
               <option value="">Select A State</option>
@@ -100,16 +99,7 @@ const Filter = (props) => {
 	<option value="WY">Wyoming</option>
             </select>
             </div>
-          </div>
-          {/* <select name="housetype" className="filters housetype" onChange={() => {console.log("test")}}>
-            <option value="all" selected>All House Types</option>
-            {housetypes()}
-          </select>
-          <select name="bedrooms" className="filters bedrooms" onChange={() => {console.log("test")}}>
-            <option value="0" selected>0+ BR</option>
-            {bedrooms()}
-          </select> */}
-          
+          </div>    
           <div className="filters price">
             <span style={{color: "black", "textAlign": "left"}} className="title">Price</span>
             <input type="text" name="min_price" placeholder="min" className="min-price" onChange={(e) => {
@@ -128,34 +118,12 @@ const Filter = (props) => {
                 
                 setPriceHigh(e.target.value.substring(1))
               } else {
-                console.log("no")
                 setPriceHigh(e.target.value)
               }
-              // props.updatePriceHigh(parseInt(e.target.value))
               }} value={priceHigh} />
           </div>
-          {/* <div className="filters extras">
-            <span  style={{color: "black"}}className="title">Extras</span>
-            <label htmlFor="extras">
-              <span>Elevators</span>
-              <input type="checkbox" name="elevator" value="elevator" onChange={() => {console.log("elevator change")}} />
-            </label>
-            <label htmlFor="extras">
-              <span>Swimming Pool</span>
-              <input type="checkbox" name="swimming_pool" value="swimming_pool" onChange={() => {console.log("pool change")}} />
-            </label>
-            <label htmlFor="extras">
-              <span>Finished Basement</span>
-              <input type="checkbox" name="finished_basement" value="finished_basement" onChange={() => {console.log("basement change")}} />
-            </label>
-            <label htmlFor="extras">
-              <span>Gym</span>
-              <input type="checkbox" name="gym" value="gym" onChange={() => {console.log("gym change")}} />
-            </label>
-          </div> */}
         </div>
         <button className ='apply-btn' onClick={() => {
-          console.log("Click");
           props.updateFilters(priceLow, priceHigh, city, state )}}>Submit</button>
       </section>
       

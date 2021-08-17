@@ -16,10 +16,8 @@ const Userprofile = () => {
   }
   return (
     <div>
-      {console.log("listings", data)}
       <h1>Saved Listings </h1>
       {data.user.listings.map(listing => {
-        console.log(listing)
         return (
           <ListingEntryProfile price={listing.listingPrice} address={listing.listingAddress} city={listing.listingCity} state={listing.listingState} zip={listing.listingZip} image={listing.images} />
         )
@@ -29,10 +27,6 @@ const Userprofile = () => {
 }
 
 const ListingEntryProfile = (props) => {
- 
-  console.log(props)
-  
- 
   return (
     <div className="listing-card for-sale">
       <div className="image">
@@ -45,10 +39,14 @@ const ListingEntryProfile = (props) => {
           <em>List Price: ${props.price}</em>
         </div>
         <div className="address details">
-          {props.address}, {props.city}, {props.state} {props.zip}
+          {props.address}
+        </div>
+        <div className="citystate details">
+          {props.city}, {props.state} {props.zip}
         </div> 
       </div>
     </div>
   )
-}
+} 
+
 export default Userprofile

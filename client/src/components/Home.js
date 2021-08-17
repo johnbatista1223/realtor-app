@@ -49,7 +49,6 @@ const Home = () => {
         }
       };
       axios.request(options).then(function (response) {
-        console.log(response)
         let tempListings = [...response.data.data.results]
         tempListings.sort((a, b) => {
           if (a.list_price < b.list_price) {
@@ -60,7 +59,6 @@ const Home = () => {
         })
         setListings(tempListings)
       }).catch(function (error) {
-        console.error(error);
       });
     }
   }, [priceLow, priceHigh, city, stateCode])
@@ -82,11 +80,9 @@ const Home = () => {
         }} />
       </div>
       <div className="listings-wrapper">
-        {console.log(errorMessage)}
         {errorMessage.length > 0 && <div className="error-message">You must enter a city and select a state</div>}
         <div className="listing-results-wrapper">
           {listings.map((listing, index) => {
-            console.log(listings);
             return <ListingEntry key={index} listing={listing} username={username} carouselImages={
               (images) => {
                 setCarouselImages(images)
@@ -102,11 +98,9 @@ Home.defaultProps = {
   listings: []
 }
 const ListingEntry = (props) => {
-  console.log('props working', props)
   const [saveListings, { loading, data }] = useMutation(SAVE_HOME);
   let history = useHistory()
   const saveFavorite = () => {
-    console.log(Auth.getProfile().data.useranme)
     const { data } = saveListings({
       variables: {
         listingPrice: props.listing.list_price.toString(),
@@ -119,11 +113,9 @@ const ListingEntry = (props) => {
         listingAuthor: Auth.getProfile().data.username
       }
   });
-    console.log("data", data)
     // history.push("/Userprofiles")
   }
   let googlemaplink = `https://www.google.com/maps/place/${props.listing.location.address.line},+${props.listing.location.address.city},+${props.listing.location.address.state_code}+${props.listing.location.address.postal_code}`
-  console.log(props)
   return (
     <div className="listing-card">
       <a href={googlemaplink} class="fa-map" target="_blank"><FaMapMarked size={30} /></a>
@@ -147,8 +139,6 @@ const ListingEntry = (props) => {
           {props.listing.location.address.line}
         </div>
         <div className="location">
-          {/* <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script> */}
-          {/* {props.listing.location.flags.is_contingent} */}
           {props.listing.location.address.city}, {props.listing.location.address.state_code} {props.listing.location.address.postal_code}
         </div>
         <div className="bedrooms">
@@ -163,12 +153,6 @@ const ListingEntry = (props) => {
         </div>
         {props.listing.flags.is_contingent === null ? <div></div> : <div className="flag-contingent"> Status: Contingent</div>}
         {props.listing.flags.is_pending === null ? <div></div> : <div className="flag-pending"> Status: Pending</div>}
-        {/* <div className="status">
-        
-      {
-      props.flags ===  {props.is_contingent} ? Pending
-      }
-        </div> */}
       </div>
     </div>
   )
